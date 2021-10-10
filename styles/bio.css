@@ -1,2 +1,399 @@
+@font-face {
+  font-family: bold;
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: demi;
+  src: url(/assets/fonts/AvenirNextLTPro-Demi.otf);
+}
+@font-face {
+  font-family: regular;
+  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
+}
+.nav {
+  background-color: #323232;
+  color: #e1e1e1;
+  font-family: regular;
+}
+.nav__title {
+  font-family: regular;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1rem;
+  padding: 1rem;
+}
+.nav__list {
+  display: flex;
+  width: 100%;
+}
+.nav__list-items {
+  font-family: demi;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.nav__list-items--hover:hover {
+  border-bottom: 1px white solid;
+  color: white;
+}
+.nav__list-items--active:active {
+  border-bottom: 1px white solid;
+  color: white;
+}
 
-/*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
+.hero__title {
+  font-family: demi;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.357), rgba(0, 0, 0, 0.5)), url(/assets/images/hero-bio.jpg);
+  background-size: 100% 100%;
+  background-repeat: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5vw;
+}
+
+.band {
+  display: flex;
+  flex-direction: column;
+}
+.band__title {
+  color: #323232;
+  width: 100%;
+  height: auto;
+  box-sizing: content-box;
+  align-content: center;
+  font-family: demi;
+}
+
+.description {
+  font-family: regular;
+}
+
+.paragraph {
+  font-family: regular;
+}
+
+.footer__title {
+  font-family: bold;
+}
+
+footer {
+  background: #323232;
+  color: white;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.footer__contact-info h2 {
+  font-family: demi;
+  font-size: 0.75rem;
+}
+
+.footer__contact-info p, .footer__copy-right {
+  font-family: regular;
+  font-size: 0.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 48rem) {
+  .nav {
+    flex-direction: row;
+    padding: 0 0 0 5vw;
+  }
+}
+.nav__title {
+  display: flex;
+  justify-content: center;
+}
+.nav__list-items {
+  width: 50%;
+  font-size: 1rem;
+}
+@media (min-width: 48rem) {
+  .nav__list-items {
+    width: auto;
+  }
+}
+
+.hero__title {
+  width: 100%;
+  height: 20rem;
+  font-family: 2rem;
+  font-weight: 200;
+}
+@media (min-width: 48rem) {
+  .hero__title {
+    height: 30rem;
+    font-size: 3.75rem;
+  }
+}
+@media (min-width: 64rem) {
+  .hero__title {
+    height: 45rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .band {
+    display: flex;
+  }
+}
+.band__title {
+  font-size: 2rem;
+  padding: 7vw 5vw 5vw 5vw;
+}
+@media (min-width: 48rem) {
+  .band__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    padding: 6.25vw 4.688vw 4.688vw 4.688vw;
+  }
+}
+.band__image {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 90%;
+  height: 90%;
+  padding: 0 5vw 5vw 5vw;
+}
+@media (min-width: 48rem) {
+  .band__image {
+    padding: 0 4.688vw 4.688vw 4.688vw;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 70%;
+    height: 70%;
+  }
+}
+.band__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (min-width: 48rem) {
+  .band__info {
+    padding: 0 4.688vw;
+  }
+}
+.band__quote {
+  font-family: demi;
+  font-size: 1.25rem;
+  padding: 0 5vw;
+  font-family: demi;
+}
+@media (min-width: 48rem) {
+  .band__quote {
+    width: 70%;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+  }
+}
+.band__quote-signature {
+  font-family: demi;
+  font-size: 1.25rem;
+  padding: 0 5vw 5vw 5vw;
+}
+@media (min-width: 48rem) {
+  .band__quote-signature {
+    font-size: 1rem;
+    padding: 0 4.688vw;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    width: 70%;
+    height: 70%;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 48rem) {
+  .description {
+    width: 70%;
+    height: 70%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 0 4.688vw;
+    width: 100%;
+  }
+}
+.description__title {
+  padding: 0 5vw 5vw 5vw;
+  font-size: 1rem;
+}
+@media (min-width: 48rem) {
+  .description__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: demi;
+    padding: 6.25vw 4.688vw 2rem 4.688vw;
+    width: 70%;
+  }
+}
+.description__image {
+  padding: 0 1rem 1rem 1rem;
+}
+.description__paragraph {
+  padding: 0 5vw 5vw 5vw;
+  width: auto;
+}
+@media (min-width: 48rem) {
+  .description__paragraph {
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    width: 100%;
+    padding: 0 2rem 2rem 0;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+@media (min-width: 48rem) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 0 4.68vw 0 4.68vw;
+  }
+}
+.gallery__title {
+  align-self: flex-start;
+  padding: 7.5vw 5vw 5vw 5vw;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-family: demi;
+}
+@media (min-width: 48rem) {
+  .gallery__title {
+    padding: 6.25vw 4.68vw 4.68vw 4.68vw;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+.gallery__images {
+  width: 100%;
+  height: auto;
+  padding: 0 5vw 5vw 5vw;
+}
+@media (min-width: 48rem) {
+  .gallery__images {
+    padding: 0 2.25rem 2.25rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 4.68vw 4.68vw 4.68vw;
+  }
+}
+@media (min-width: 48rem) {
+  .gallery__images-sub {
+    display: flex;
+    justify-content: center;
+  }
+}
+.gallery__images-1 {
+  width: 90%;
+  height: auto;
+  padding: 0 0 1rem 1rem;
+}
+@media (min-width: 48rem) {
+  .gallery__images-1 {
+    width: 30%;
+    padding: 0 0 1rem 1rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .paragraph {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 70%;
+    height: 50%;
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__top-logo {
+    display: flex;
+  }
+}
+.footer__title {
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+.footer__title-bandsite {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .footer__title-bandsite {
+    font-family: demi;
+    display: block;
+  }
+}
+.footer__logo-image {
+  padding: 1rem;
+}
+@media (min-width: 48rem) {
+  .footer__contact {
+    display: flex;
+  }
+}
+.footer__contact-info {
+  padding: 1rem;
+}
+.footer__bottom-header {
+  font-family: demi;
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+@media (min-width: 48rem) {
+  .footer__bottom-header {
+    display: none;
+  }
+}
+.footer__copy-right {
+  padding: 0 1rem 1rem 1rem;
+  font-family: regular;
+}/*# sourceMappingURL=bio.css.map */

@@ -1,0 +1,337 @@
+@use './partials/global' as *; 
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use './partials/font' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+    .nav {
+        display: flex; 
+        flex-direction: column;
+       
+         
+
+        @media (min-width: $tablet) {
+            flex-direction: row; 
+            padding: 0 0 0 5vw; 
+        }
+
+        &__title {
+            display: flex; 
+            justify-content: center;
+            
+        }
+
+
+        &__list-items {
+            width: 50%;
+            font-size: 1rem; 
+
+
+
+            @media (min-width: $tablet) {
+                width: auto;
+            }
+        }
+
+
+    }
+
+    .hero__title {
+            width: $background-width;
+            height: 20rem; 
+            font-family: 2rem; 
+            font-weight: 200; 
+            
+
+        @media (min-width: $tablet) {
+            height: 30rem; 
+            font-size: 3.75rem;
+            
+        }
+
+        @media (min-width: $desktop) {
+            height: 45rem;
+
+        }
+
+    }
+
+    .band{
+
+        @media (min-width: $tablet) {
+            display: flex;
+        }
+        
+        &__title {
+            font-size: 2rem; 
+            padding: 7vw 5vw 5vw 5vw; 
+
+            @media (min-width: $tablet) {
+                @include tablet-section-header; 
+                padding: 6.25vw 4.688vw 4.688vw 4.688vw; 
+            }
+        }
+
+        &__image {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            width: 90%;
+            height: 90%;
+            padding: 0 5vw 5vw 5vw; 
+
+            @media (min-width: $tablet) {
+                padding: 0 4.688vw 4.688vw 4.688vw;
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                @include width; 
+            }
+        }
+
+        &__info {
+            display:flex; 
+            flex-direction:column;
+            justify-content: center;
+            align-items: flex-start;
+
+            @media (min-width: $tablet) {
+            padding: 0 4.688vw;
+            }
+  
+        }
+
+        &__quote {
+
+            font-family: demi; 
+            font-size: 1.25rem; 
+            padding: 0 5vw;
+            font-family: demi; 
+
+            @media (min-width: $tablet) {
+                width: 70%;
+                flex-direction: column; 
+                align-self: center; 
+                justify-content: center;
+                @include tablet-subheader;
+                padding: 1rem; 
+
+            }
+
+            &-signature {
+                font-family: demi;
+                font-size:1.25rem;
+                padding: 0 5vw 5vw 5vw; 
+                
+                @media (min-width: $tablet) {
+                    font-size: 1rem;
+                    padding: 0 4.688vw;  
+                    @include band-alignment;
+                    @include width;
+                }
+            }
+        }
+
+        
+
+    }
+
+    .description {
+
+        display: flex; 
+        flex-direction: column; 
+
+        @media (min-width: $tablet) {
+            @include width; 
+            flex-direction: column; 
+            display: flex; 
+            align-items: center;
+            padding: 0 4.688vw;
+            width: 100%; 
+        }
+
+        &__title {
+            padding: 0 5vw 5vw 5vw;
+            font-size: 1rem; 
+
+                @media (min-width: $tablet) {
+                    @include tablet-subheader;
+                    font-family: demi; 
+                    padding: 6.25vw 4.688vw 2rem 4.688vw;
+                    width: 70%;
+
+                }
+        }
+        
+        &__image {
+            padding: $padding-mobile; 
+        }
+
+        &__paragraph {
+            padding: 0 5vw 5vw 5vw; 
+            width: auto; 
+
+            @media (min-width: $tablet){
+            @include band-alignment;
+            @include tablet-body; 
+            width: 100%; 
+            padding: 0 2rem 2rem 0;
+            }
+     
+        }
+
+    }
+
+    .gallery {
+
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        background-color: $alabaster; 
+
+
+            @media (min-width: $tablet) {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            padding: 0 4.68vw 0 4.68vw; 
+            }
+
+        &__title {
+            align-self: flex-start; 
+            padding: 7.5vw 5vw 5vw 5vw; 
+            @include mobile-page-section-header;
+            font-family: demi; 
+
+            @media (min-width: $tablet) {
+            padding: 6.25vw 4.68vw 4.68vw 4.68vw; 
+            @include tablet-section-header;
+            }
+        }
+    
+        &__images {
+            width: 100%; 
+            height: auto; 
+            padding: 0 5vw 5vw 5vw; 
+
+            @media (min-width: $tablet) {
+                padding: $padding-desktop;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%; 
+                padding: 0 4.68vw 4.68vw 4.68vw;
+            }
+            
+            &-sub {
+                @media (min-width: $tablet) {
+                    display:flex; 
+                    justify-content: center;
+                }
+            }
+    
+            &-1 {
+                    width: 90%; 
+                    height: auto; 
+                    padding: 0 0 1rem 1rem; 
+
+                    @media (min-width: $tablet) {
+                        width: 30%;
+                        padding: 0 0 1rem 1rem;  
+
+                    }
+
+                }
+        }
+    
+    } 
+
+    .paragraph {
+        @media (min-width: $tablet) {
+            display:flex; 
+            align-self: center; 
+            justify-content: center;
+            box-sizing: border-box; 
+            width: 70%;
+            height: 50%; 
+
+        }
+
+    }
+    
+    .footer {
+
+        @media (min-width: $tablet) {
+            display: flex; 
+            flex-direction: column; 
+
+            &__top {
+                display: flex; 
+                justify-content: space-between;
+                align-items: center;
+    
+                &-logo {
+                    display: flex; 
+                }
+    
+                
+            }
+
+
+        }
+
+        &__title {
+            padding: $padding-mobile-header;
+        }
+
+        &__title-bandsite {
+            display: none; 
+
+            @media (min-width: $tablet) {
+                font-family: demi; 
+                display: block;  
+            }
+        }
+
+        &__logo-image {
+            padding: 1rem;
+        }
+
+        &__contact {
+
+            @media (min-width: $tablet) {
+                display: flex; 
+
+            }
+        
+            &-info {
+                padding: 1rem;  
+            }
+
+        }
+
+        &__bottom-header {
+            font-family: demi; 
+            padding: $padding-mobile-header;
+
+            @media (min-width: $tablet) {
+                display: none; 
+            }
+        }
+
+        &__copy-right {
+            padding: $padding-mobile;
+            font-family: regular; 
+        }
+
+    }
+
+
+
+

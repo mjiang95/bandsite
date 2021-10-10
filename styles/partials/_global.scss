@@ -1,0 +1,108 @@
+
+@use './variables' as *;
+@use './mixins' as *;
+@use './font' as *;
+
+
+
+.nav {
+    background-color: $bandsite-black;
+    color: $gallery-background;
+    font-family: regular; 
+
+    &__title {
+        font-family: regular; 
+        font-weight: 400; 
+        font-size: 2rem; 
+        line-height: 1rem; 
+        padding: 1rem; 
+    }
+
+    &__list {
+        display: flex;
+        width: 100%; 
+        
+
+        &-items {
+            font-family: demi;
+            padding: 1rem; 
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            &--hover:hover {
+             border-bottom: 1px white solid; 
+             color: white; 
+            }
+
+            &--active:active {
+             border-bottom: 1px white solid; 
+             color:white; 
+            }
+        }
+    
+    }    
+
+}
+
+
+
+.hero__title {
+    font-family: demi; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.357),rgba(0, 0, 0, 0.5)), url(/assets/images/hero-bio.jpg);
+    background-size: 100% 100%; 
+    background-repeat: none;
+    color: white;  
+    display: flex; 
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5vw;
+}
+
+.band {
+    display: flex; 
+    flex-direction: column;
+    
+    &__title {
+        color: $bandsite-black;
+        width: 100%; 
+        height: auto; 
+        box-sizing: content-box;
+        align-content: center;
+        font-family: demi;       
+    }
+
+
+
+
+}
+
+.description {
+    font-family: regular; 
+
+}
+
+.paragraph {
+    font-family: regular; 
+
+}
+
+.footer__title { 
+    font-family: bold; 
+}
+
+footer {
+    background: $bandsite-black;
+    color: white; 
+    padding: $padding-mobile;
+}
+
+.footer__contact-info h2 {
+    font-family: demi; 
+    font-size: 0.75rem; 
+}
+
+.footer__contact-info p, .footer__copy-right {
+    font-family: regular; 
+    font-size: 0.75rem; 
+}
