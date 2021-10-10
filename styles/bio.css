@@ -75,24 +75,9 @@
   font-family: regular;
 }
 
-.footer__title {
-  font-family: bold;
-}
-
 footer {
   background: #323232;
   color: white;
-  padding: 0 1rem 1rem 1rem;
-}
-
-.footer__contact-info h2 {
-  font-family: demi;
-  font-size: 0.75rem;
-}
-
-.footer__contact-info p, .footer__copy-right {
-  font-family: regular;
-  font-size: 0.75rem;
 }
 
 * {
@@ -325,7 +310,7 @@ footer {
   }
 }
 .gallery__images-1 {
-  width: 90%;
+  width: 92%;
   height: auto;
   padding: 0 0 1rem 1rem;
 }
@@ -347,34 +332,61 @@ footer {
   }
 }
 
+.footer {
+  padding: 7.5vw 5vw 5vw 5vw;
+}
 @media (min-width: 48rem) {
   .footer {
     display: flex;
     flex-direction: column;
+    padding: 2rem 4.688vw 4.688vw 4.688vw;
   }
+}
+.footer__top {
+  font-size: 1.25rem;
+  font-family: demi;
+}
+@media (min-width: 48rem) {
   .footer__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+}
+@media (min-width: 48rem) {
   .footer__top-logo {
     display: flex;
   }
 }
-.footer__title {
-  padding: 1.5rem 1rem 1rem 1rem;
+@media (min-width: 48rem) {
+  .footer__title {
+    font-size: 3rem;
+    padding: 1.75rem 0.6rem 0 4.688vw;
+  }
 }
 .footer__title-bandsite {
   display: none;
 }
 @media (min-width: 48rem) {
   .footer__title-bandsite {
-    font-family: demi;
+    font-family: regular;
+    font-weight: 400;
     display: block;
+    vertical-align: bottom;
+    font-size: 1.75rem;
+    padding: 4.688vw;
   }
 }
 .footer__logo-image {
+  height: 2rem;
+  width: 2rem;
   padding: 1rem;
+}
+@media (min-width: 48rem) {
+  .footer__logo-image {
+    justify-content: center;
+    padding: 2.25rem 1rem 2.25rem 2.25rem;
+  }
 }
 @media (min-width: 48rem) {
   .footer__contact {
@@ -382,11 +394,21 @@ footer {
   }
 }
 .footer__contact-info {
-  padding: 1rem;
+  padding: 0 4.688vw 4.688vw 4.688vw;
+}
+.footer__contact-info h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: regular;
+}
+.footer__contact-info p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: regular;
 }
 .footer__bottom-header {
-  font-family: demi;
-  padding: 1.5rem 1rem 1rem 1rem;
+  font-family: regular;
+  padding: 5vw;
 }
 @media (min-width: 48rem) {
   .footer__bottom-header {
@@ -394,6 +416,7 @@ footer {
   }
 }
 .footer__copy-right {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 5vw 5vw 5vw;
+  font-size: 1rem;
   font-family: regular;
 }/*# sourceMappingURL=bio.css.map */

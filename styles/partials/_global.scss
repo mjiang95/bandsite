@@ -87,22 +87,9 @@
 
 }
 
-.footer__title { 
-    font-family: bold; 
-}
-
 footer {
     background: $bandsite-black;
     color: white; 
-    padding: $padding-mobile;
 }
 
-.footer__contact-info h2 {
-    font-family: demi; 
-    font-size: 0.75rem; 
-}
-
-.footer__contact-info p, .footer__copy-right {
-    font-family: regular; 
-    font-size: 0.75rem; 
-}
+ 
