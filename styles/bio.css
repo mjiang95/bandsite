@@ -391,10 +391,11 @@ footer {
 @media (min-width: 48rem) {
   .footer__contact {
     display: flex;
+    width: 100%;
   }
 }
 .footer__contact-info {
-  padding: 0 4.688vw 4.688vw 4.688vw;
+  padding: 0 0 4.68vw 4.68vw;
 }
 .footer__contact-info h2 {
   font-size: 1.25rem;

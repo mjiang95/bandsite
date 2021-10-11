@@ -333,11 +333,12 @@
 
             @media (min-width: $tablet) {
                 display: flex; 
+                width: 100%; 
 
             }
         
             &-info {
-                padding: 0 4.688vw 4.688vw 4.688vw;  
+                padding: 0 0 4.68vw 4.68vw;  
             }
 
             &-info h2 {
