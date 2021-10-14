@@ -1,0 +1,81 @@
+@font-face {
+  font-family: bold;
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: demi;
+  src: url(/assets/fonts/AvenirNextLTPro-Demi.otf);
+}
+@font-face {
+  font-family: regular;
+  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
+}
+.nav {
+  background-color: #323232;
+  color: #e1e1e1;
+  font-family: regular;
+}
+.nav__title {
+  font-family: regular;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1rem;
+  padding: 1rem;
+}
+.nav__list {
+  display: flex;
+  width: 100%;
+}
+.nav__list-items {
+  font-family: demi;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.nav__list-items--hover:hover {
+  border-bottom: 1px white solid;
+  color: white;
+}
+.nav__list-items--active:active {
+  border-bottom: 1px white solid;
+  color: white;
+}
+
+.hero__title {
+  font-family: demi;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.357), rgba(0, 0, 0, 0.5)), url(/assets/images/hero-bio.jpg);
+  background-size: 100% 100%;
+  background-repeat: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5vw;
+}
+
+.band {
+  display: flex;
+  flex-direction: column;
+}
+.band__title {
+  color: #323232;
+  width: 100%;
+  height: auto;
+  box-sizing: content-box;
+  align-content: center;
+  font-family: demi;
+}
+
+.description {
+  font-family: regular;
+}
+
+.paragraph {
+  font-family: regular;
+}
+
+footer {
+  background: #323232;
+  color: white;
+}/*# sourceMappingURL=show.css.map */
