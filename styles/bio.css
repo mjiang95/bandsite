@@ -1,22 +1,42 @@
 @font-face {
-  font-family: bold;
+  font-family: "Avenir";
   src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
 }
 @font-face {
-  font-family: demi;
+  font-family: "Avenir";
   src: url(/assets/fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
 }
 @font-face {
-  font-family: regular;
+  font-family: "Avenir";
   src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
 }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir", sans-serif;
+}
+
 .nav {
+  display: flex;
+  flex-direction: column;
   background-color: #323232;
   color: #e1e1e1;
-  font-family: regular;
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
+}
+@media (min-width: 48rem) {
+  .nav {
+    flex-direction: row;
+    padding: 0 0 0 5vw;
+  }
 }
 .nav__title {
-  font-family: regular;
+  display: flex;
+  justify-content: center;
+  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 2rem;
   line-height: 1rem;
@@ -27,11 +47,19 @@
   width: 100%;
 }
 .nav__list-items {
-  font-family: demi;
+  width: 50%;
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
   padding: 1rem;
   justify-content: center;
   align-items: center;
   display: flex;
+}
+@media (min-width: 48rem) {
+  .nav__list-items {
+    width: auto;
+  }
 }
 .nav__list-items--hover:hover {
   border-bottom: 1px white solid;
@@ -40,18 +68,6 @@
 .nav__list-items--active:active {
   border-bottom: 1px white solid;
   color: white;
-}
-
-.hero__title {
-  font-family: demi;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.357), rgba(0, 0, 0, 0.5)), url(/assets/images/hero-bio.jpg);
-  background-size: 100% 100%;
-  background-repeat: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 5vw;
 }
 
 .band {
@@ -64,15 +80,18 @@
   height: auto;
   box-sizing: content-box;
   align-content: center;
-  font-family: demi;
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
 }
 
 .description {
-  font-family: regular;
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
 }
 
 .paragraph {
-  font-family: regular;
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
 }
 
 footer {
@@ -80,40 +99,118 @@ footer {
   color: white;
 }
 
+.footer {
+  padding: 7.5vw 5vw 5vw 5vw;
+}
+@media (min-width: 48rem) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4.688vw 4.688vw 4.688vw;
+  }
+}
+.footer__top {
+  font-size: 1.25rem;
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+}
+@media (min-width: 48rem) {
+  .footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__top-logo {
+    display: flex;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__title {
+    font-size: 3rem;
+    padding: 1.75rem 0.6rem 0 4.688vw;
+  }
+}
+.footer__title-bandsite {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .footer__title-bandsite {
+    font-family: "Avenir", sans-serif;
+    font-weight: 400;
+    display: block;
+    vertical-align: bottom;
+    font-size: 1.75rem;
+    padding: 4.688vw;
+  }
+}
+.footer__logo-image {
+  height: 2rem;
+  width: 2rem;
+  padding: 1rem;
+}
+@media (min-width: 48rem) {
+  .footer__logo-image {
+    justify-content: center;
+    padding: 2.25rem 1rem 2.25rem 2.25rem;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__contact {
+    display: flex;
+    width: 100%;
+  }
+}
+.footer__contact-info {
+  padding: 0 0 4.68vw 4.65vw;
+}
+.footer__contact-info h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: regular;
+}
+.footer__contact-info p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: regular;
+}
+.footer__bottom-header {
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
+  padding: 5vw;
+}
+@media (min-width: 48rem) {
+  .footer__bottom-header {
+    display: none;
+  }
+}
+.footer__copy-right {
+  padding: 0 5vw 5vw 5vw;
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-.nav {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 48rem) {
-  .nav {
-    flex-direction: row;
-    padding: 0 0 0 5vw;
-  }
-}
-.nav__title {
-  display: flex;
-  justify-content: center;
-}
-.nav__list-items {
-  width: 50%;
-  font-size: 1rem;
-}
-@media (min-width: 48rem) {
-  .nav__list-items {
-    width: auto;
-  }
-}
-
 .hero__title {
+  font-family: "Avenir", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  background-size: 100% 100%;
+  background-repeat: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.357), rgba(0, 0, 0, 0.5)), url(/assets/images/hero-bio.jpg);
   width: 100%;
   height: 20rem;
-  font-family: 2rem;
-  font-weight: 200;
 }
 @media (min-width: 48rem) {
   .hero__title {
@@ -127,9 +224,19 @@ footer {
   }
 }
 
+.band {
+  color: #323232;
+  width: 100%;
+  height: auto;
+  box-sizing: content-box;
+  align-content: center;
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+}
 @media (min-width: 48rem) {
   .band {
     display: flex;
+    flex-direction: column;
   }
 }
 .band__title {
@@ -174,10 +281,10 @@ footer {
   }
 }
 .band__quote {
-  font-family: demi;
+  font-family: "Avenir", sans-serif;
+  font-size: 600;
   font-size: 1.25rem;
   padding: 0 5vw;
-  font-family: demi;
 }
 @media (min-width: 48rem) {
   .band__quote {
@@ -192,7 +299,8 @@ footer {
   }
 }
 .band__quote-signature {
-  font-family: demi;
+  font-family: "Avenir", sans-serif;
+  font-size: 600;
   font-size: 1.25rem;
   padding: 0 5vw 5vw 5vw;
 }
@@ -232,7 +340,8 @@ footer {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
-    font-family: demi;
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
     padding: 6.25vw 4.688vw 2rem 4.688vw;
     width: 70%;
   }
@@ -330,94 +439,4 @@ footer {
     width: 70%;
     height: 50%;
   }
-}
-
-.footer {
-  padding: 7.5vw 5vw 5vw 5vw;
-}
-@media (min-width: 48rem) {
-  .footer {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 4.688vw 4.688vw 4.688vw;
-  }
-}
-.footer__top {
-  font-size: 1.25rem;
-  font-family: demi;
-}
-@media (min-width: 48rem) {
-  .footer__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-@media (min-width: 48rem) {
-  .footer__top-logo {
-    display: flex;
-  }
-}
-@media (min-width: 48rem) {
-  .footer__title {
-    font-size: 3rem;
-    padding: 1.75rem 0.6rem 0 4.688vw;
-  }
-}
-.footer__title-bandsite {
-  display: none;
-}
-@media (min-width: 48rem) {
-  .footer__title-bandsite {
-    font-family: regular;
-    font-weight: 400;
-    display: block;
-    vertical-align: bottom;
-    font-size: 1.75rem;
-    padding: 4.688vw;
-  }
-}
-.footer__logo-image {
-  height: 2rem;
-  width: 2rem;
-  padding: 1rem;
-}
-@media (min-width: 48rem) {
-  .footer__logo-image {
-    justify-content: center;
-    padding: 2.25rem 1rem 2.25rem 2.25rem;
-  }
-}
-@media (min-width: 48rem) {
-  .footer__contact {
-    display: flex;
-    width: 100%;
-  }
-}
-.footer__contact-info {
-  padding: 0 0 4.68vw 4.68vw;
-}
-.footer__contact-info h2 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: regular;
-}
-.footer__contact-info p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-family: regular;
-}
-.footer__bottom-header {
-  font-family: regular;
-  padding: 5vw;
-}
-@media (min-width: 48rem) {
-  .footer__bottom-header {
-    display: none;
-  }
-}
-.footer__copy-right {
-  padding: 0 5vw 5vw 5vw;
-  font-size: 1rem;
-  font-family: regular;
 }/*# sourceMappingURL=bio.css.map */

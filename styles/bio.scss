@@ -8,69 +8,50 @@
     padding: 0;
 }
 
-    .nav {
-        display: flex; 
-        flex-direction: column;
-       
-         
-
-        @media (min-width: $tablet) {
-            flex-direction: row; 
-            padding: 0 0 0 5vw; 
-        }
-
-        &__title {
-            display: flex; 
-            justify-content: center;
-            
-        }
-
-
-        &__list-items {
-            width: 50%;
-            font-size: 1rem; 
-
-
-
-            @media (min-width: $tablet) {
-                width: auto;
-            }
-        }
-
-
-    }
-
     .hero__title {
-            width: $background-width;
-            height: 20rem; 
-            font-family: 2rem; 
-            font-weight: 200; 
+        font-family: $font-stack; 
+        font-size: 2rem; 
+        font-weight: 600; 
+        background-size: 100% 100%; 
+        background-repeat: none;
+        color: white;  
+        display: flex; 
+        align-items: center;
+        box-sizing: border-box;
+        padding: 5vw;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.357),rgba(0, 0, 0, 0.5)), url(/assets/images/hero-bio.jpg);
+        width: $background-width;
+        height: 20rem; 
             
-
-        @media (min-width: $tablet) {
+        @include tablet {
             height: 30rem; 
             font-size: 3.75rem;
-            
         }
 
-        @media (min-width: $desktop) {
+        @include desktop {
             height: 45rem;
-
         }
-
     }
 
     .band{
+        color: $bandsite-black;
+        width: 100%; 
+        height: auto; 
+        box-sizing: content-box;
+        align-content: center;
+        font-family: $font-stack;       
+        font-weight: 600; 
 
-        @media (min-width: $tablet) {
+        @include tablet {
             display: flex;
+            flex-direction: column;
         }
-        
+
         &__title {
             font-size: 2rem; 
             padding: 7vw 5vw 5vw 5vw; 
 
-            @media (min-width: $tablet) {
+            @include tablet {
                 @include tablet-section-header; 
                 padding: 6.25vw 4.688vw 4.688vw 4.688vw; 
             }
@@ -84,7 +65,7 @@
             height: 90%;
             padding: 0 5vw 5vw 5vw; 
 
-            @media (min-width: $tablet) {
+            @include tablet {
                 padding: 0 4.688vw 4.688vw 4.688vw;
                 display: flex;
                 justify-content: center;
@@ -99,20 +80,18 @@
             justify-content: center;
             align-items: flex-start;
 
-            @media (min-width: $tablet) {
+            @include tablet {
             padding: 0 4.688vw;
             }
-  
         }
 
         &__quote {
-
-            font-family: demi; 
+            font-family: $font-stack; 
+            font-size: 600;  
             font-size: 1.25rem; 
             padding: 0 5vw;
-            font-family: demi; 
 
-            @media (min-width: $tablet) {
+            @include tablet {
                 width: 70%;
                 flex-direction: column; 
                 align-self: center; 
@@ -123,11 +102,12 @@
             }
 
             &-signature {
-                font-family: demi;
+                font-family: $font-stack; 
+                font-size: 600; 
                 font-size:1.25rem;
                 padding: 0 5vw 5vw 5vw; 
                 
-                @media (min-width: $tablet) {
+                @include tablet {
                     font-size: 1rem;
                     padding: 0 4.688vw;  
                     @include band-alignment;
@@ -135,17 +115,13 @@
                 }
             }
         }
-
-        
-
     }
 
     .description {
-
         display: flex; 
         flex-direction: column; 
 
-        @media (min-width: $tablet) {
+        @include tablet {
             @include width; 
             flex-direction: column; 
             display: flex; 
@@ -158,12 +134,12 @@
             padding: 0 5vw 5vw 5vw;
             font-size: 1rem; 
 
-                @media (min-width: $tablet) {
+                @include tablet {
                     @include tablet-subheader;
-                    font-family: demi; 
+                    font-family: $font-stack;  
+                    font-weight: 600; 
                     padding: 6.25vw 4.688vw 2rem 4.688vw;
                     width: 70%;
-
                 }
         }
         
@@ -175,33 +151,28 @@
             padding: 0 5vw 5vw 5vw; 
             width: auto; 
 
-            @media (min-width: $tablet){
+            @include tablet {
             @include band-alignment;
             @include tablet-body; 
             width: 100%; 
             padding: 0 2rem 2rem 0;
-            }
-     
+            }   
         }
-
     }
 
     .gallery {
-
         display: flex; 
         flex-direction: column; 
         align-items: center;
         background-color: $alabaster; 
 
-
-            @media (min-width: $tablet) {
-            
+        @include tablet {       
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-content: center;
             padding: 0 4.68vw 0 4.68vw; 
-            }
+        }
 
         &__title {
             align-self: flex-start; 
@@ -209,7 +180,7 @@
             @include mobile-page-section-header;
             font-family: demi; 
 
-            @media (min-width: $tablet) {
+        @include tablet {
             padding: 6.25vw 4.68vw 4.68vw 4.68vw; 
             @include tablet-section-header;
             }
@@ -220,7 +191,7 @@
             height: auto; 
             padding: 0 5vw 5vw 5vw; 
 
-            @media (min-width: $tablet) {
+            @include tablet {
                 padding: $padding-desktop;
                 display: flex;
                 flex-direction: column;
@@ -230,7 +201,7 @@
             }
             
             &-sub {
-                @media (min-width: $tablet) {
+                @include tablet {
                     display:flex; 
                     justify-content: center;
                 }
@@ -241,139 +212,25 @@
                     height: auto; 
                     padding: 0 0 1rem 1rem; 
 
-                    @media (min-width: $tablet) {
+                    @include tablet {
                         width: 30%;
                         padding: 0 0 1rem 1rem;  
-
                     }
-
                 }
-        }
-    
+        }  
     } 
 
     .paragraph {
-        @media (min-width: $tablet) {
+        @include tablet {
             display:flex; 
             align-self: center; 
             justify-content: center;
             box-sizing: border-box; 
             width: 70%;
             height: 50%; 
-
         }
-
     }
     
-    .footer {
-        padding: 7.5vw 5vw 5vw 5vw;
-        
-        @media (min-width: $tablet) {
-            display: flex; 
-            flex-direction: column; 
-            padding: 2rem 4.688vw 4.688vw 4.688vw; 
-
-        }
-        
-        &__top {
-            font-size: 1.25rem;  
-            font-family: demi; 
-
-            @media (min-width: $tablet) {
-                display: flex; 
-                justify-content: space-between;
-                align-items: center;
-
-            }
-
-            &-logo {
-
-                @media (min-width: $tablet) {
-                    display:flex; 
-                }
-            }
-            
-
-        }
-        
-        &__title {
-            
-
-            @media (min-width: $tablet) {
-                font-size: 3rem; 
-                padding: 1.75rem 0.6rem 0 4.688vw;
-            }
-        }
-
-        &__title-bandsite {
-            display: none; 
-
-            @media (min-width: $tablet) {
-                font-family: regular; 
-                font-weight: 400; 
-                display: block; 
-                vertical-align: bottom;
-                font-size: 1.75rem;  
-                padding: 4.688vw; 
-            }
-        }
-
-        &__logo-image {
-            height: 2rem; 
-            width: 2rem; 
-            padding: 1rem;
-
-            @media (min-width: $tablet) {
-                justify-content: center;
-                padding: 2.25rem 1rem 2.25rem 2.25rem;  
-            }
-        }
-
-        &__contact {
-
-            @media (min-width: $tablet) {
-                display: flex; 
-                width: 100%; 
-
-            }
-        
-            &-info {
-                padding: 0 0 4.68vw 4.68vw;  
-            }
-
-            &-info h2 {
-                font-size: 1.25rem; 
-                line-height: 1.75rem; 
-                font-family: regular; 
-            }
-
-            &-info p {
-                font-size: 1rem; 
-                line-height: 1.5rem; 
-                font-family: regular; 
-            }
-
-        }
-
-        &__bottom-header {
-            font-family: regular; 
-            padding: 5vw;
-            
-
-            @media (min-width: $tablet) {
-                display: none; 
-            }
-        }
-
-        &__copy-right {
-            padding: 0 5vw 5vw 5vw;
-            font-size: 1rem; 
-            font-family: regular; 
-            
-        }
-
-    }
-
-
+    
 
 
