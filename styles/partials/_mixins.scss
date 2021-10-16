@@ -1,3 +1,17 @@
+@use "./variables" as *;
+
+@mixin tablet {
+    @media (min-width: $tablet-breaking-point) {
+      @content;
+    }
+  }
+
+@mixin desktop {
+    @media (min-width: $desktop-breaking-point) {
+      @content;
+    }
+  }
+
 @mixin font-small {
     font-size: 0.625rem;
 }
