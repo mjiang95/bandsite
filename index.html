@@ -2,7 +2,7 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Biography</title>
         <link rel="stylesheet" href="./styles/bio.css">
@@ -89,13 +89,16 @@
     <div>
         <h2>Join the Conversation</h2>
     </div>
-    <form >
+    <div class= "new-comments-section">
+    <form action= "" class="user-comments">
+        <img src="/assets/images/Mohan-muruge.jpg" alt="Mohan Muruge self-image">
         <label for= "name">Name</label>
-        <input type= "name" name= "customer-name">
-        <label for= "customer-respond">Comment</label>
-        <textarea name="customer-response" id="customer-comment" cols="30" rows="10"></textarea>
-        <input type= "button" name= "submit-button">
+        <input type="text" name= "name" class="user-name__input-text" placeholder="Enter your name">
+        <label for= "response">Comment</label>
+        <textarea name="response" id="response" cols="30" rows="10" placeholder="Add a new comment"></textarea>
+        <input type="submit" name= "submit-button" value= "comment">
     </form>
+    </div>
     <section class= "comments-section">
     </section>
     <footer class= "footer">
