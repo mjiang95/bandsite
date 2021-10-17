@@ -56,6 +56,10 @@ let arrayObject = [{
     createTicketPurchaseDiv.appendChild(createVenue);
     createTicketPurchaseDiv.appendChild(createLocation);
 
+    let createContainer = document.createElement("div");
+    createContainer.classList.add("ticket-purchase__container");
+    createContainer.appendChild(createTicketPurchaseDiv);
+
 let displayTicketInfo = (ticketInfo) => {
 
     let createShowsInfo = document.createElement('div');
@@ -103,8 +107,10 @@ let displayTicketInfo = (ticketInfo) => {
     createButton.innerText = 'BUY TICKETS';
 
     createShowsInfo.appendChild(createButton);
+    createContainer.appendChild(createShowsInfo);
 
-    parent.appendChild(createShowsInfo);
+
+    parent.appendChild(createContainer);
 };
 
 

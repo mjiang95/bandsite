@@ -19,17 +19,17 @@
 
     @include tablet {
         flex-direction: row; 
-        padding: 0 0 0 5vw; 
+        padding: 4.68vw;     
     }
 
     &__title {
         display: flex; 
         justify-content: center;
+        align-items: center; 
         font-family: $font-stack; 
         font-weight: 400; 
         font-size: 2rem; 
         line-height: 1rem; 
-        padding: 1rem; 
     }
 
     &__list {
@@ -45,14 +45,18 @@
             justify-content: center;
             align-items: center;
             display: flex;
+            text-decoration: none; 
+            color: $alabaster;
 
             @include tablet {
                 width: auto;
+                padding: 0 4.68vw 0 4.68vw; 
             }
 
             &--hover:hover {
              border-bottom: 1px white solid; 
              color: white; 
+             
             }
 
             &--active:active {
@@ -90,25 +94,26 @@
     font-weight: 400; 
 }
 
-footer {
-    background: $bandsite-black;
-    color: white; 
-}
-
 .footer {
     padding: 7.5vw 5vw 5vw 5vw;
+    width: 100vw;  
+    box-sizing: border-box;  
+    background: $bandsite-black;
+    color: white;  
+    
     
     @include tablet {
         display: flex; 
         flex-direction: column; 
         padding: 2rem 4.688vw 4.688vw 4.688vw; 
-
     }
     
     &__top {
         font-size: 1.25rem;  
         font-family: $font-stack; 
         font-weight: 600; 
+        width: 90vw; 
+        
 
         @include tablet {
             display: flex; 
@@ -124,6 +129,8 @@ footer {
     }
     
     &__title {
+        padding: 0 0 0 5vw; 
+
         @include tablet {
             font-size: 3rem; 
             padding: 1.75rem 0.6rem 0 4.688vw;
@@ -155,25 +162,32 @@ footer {
     }
 
     &__contact {
+        font-family: $font-stack;
+
         @include tablet {
             display: flex; 
-            width: 100%; 
+            width: 100vw; 
         }
     
         &-info {
+            font-family: $font-stack;
             padding: 0 0 4.68vw 4.65vw;  
+            font-size: 0.875rem; 
+
+            @include tablet {
+                width:26vw; 
+            }
+
         }
 
         &-info h2 {
-            font-size: 1.25rem; 
+            font-family: $font-stack;
             line-height: 1.75rem; 
-            font-family: regular; 
         }
 
         &-info p {
-            font-size: 1rem; 
+            font-family: $font-stack;
             line-height: 1.5rem; 
-            font-family: regular; 
         }
     }
 

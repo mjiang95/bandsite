@@ -30,17 +30,17 @@
 @media (min-width: 48rem) {
   .nav {
     flex-direction: row;
-    padding: 0 0 0 5vw;
+    padding: 4.68vw;
   }
 }
 .nav__title {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 2rem;
   line-height: 1rem;
-  padding: 1rem;
 }
 .nav__list {
   display: flex;
@@ -55,10 +55,13 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  text-decoration: none;
+  color: #FAFAFA;
 }
 @media (min-width: 48rem) {
   .nav__list-items {
     width: auto;
+    padding: 0 4.68vw 0 4.68vw;
   }
 }
 .nav__list-items--hover:hover {
@@ -94,13 +97,12 @@
   font-weight: 400;
 }
 
-footer {
-  background: #323232;
-  color: white;
-}
-
 .footer {
   padding: 7.5vw 5vw 5vw 5vw;
+  width: 100vw;
+  box-sizing: border-box;
+  background: #323232;
+  color: white;
 }
 @media (min-width: 48rem) {
   .footer {
@@ -113,6 +115,7 @@ footer {
   font-size: 1.25rem;
   font-family: "Avenir", sans-serif;
   font-weight: 600;
+  width: 90vw;
 }
 @media (min-width: 48rem) {
   .footer__top {
@@ -125,6 +128,9 @@ footer {
   .footer__top-logo {
     display: flex;
   }
+}
+.footer__title {
+  padding: 0 0 0 5vw;
 }
 @media (min-width: 48rem) {
   .footer__title {
@@ -156,24 +162,32 @@ footer {
     padding: 2.25rem 1rem 2.25rem 2.25rem;
   }
 }
+.footer__contact {
+  font-family: "Avenir", sans-serif;
+}
 @media (min-width: 48rem) {
   .footer__contact {
     display: flex;
-    width: 100%;
+    width: 100vw;
   }
 }
 .footer__contact-info {
+  font-family: "Avenir", sans-serif;
   padding: 0 0 4.68vw 4.65vw;
+  font-size: 0.875rem;
+}
+@media (min-width: 48rem) {
+  .footer__contact-info {
+    width: 26vw;
+  }
 }
 .footer__contact-info h2 {
-  font-size: 1.25rem;
+  font-family: "Avenir", sans-serif;
   line-height: 1.75rem;
-  font-family: regular;
 }
 .footer__contact-info p {
-  font-size: 1rem;
+  font-family: "Avenir", sans-serif;
   line-height: 1.5rem;
-  font-family: regular;
 }
 .footer__bottom-header {
   font-family: "Avenir", sans-serif;
