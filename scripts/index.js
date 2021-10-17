@@ -22,6 +22,8 @@ let commentsArray = [{
 
 let parent = document.querySelector('.comments-section');
 
+
+
 let displayArrayObjects = (comments) => {
     
 let commentsDivider = document.createElement("div");
@@ -50,16 +52,24 @@ commentTime.classList.add("comment-Time");
 commentTime.innerText = comments.date;
 
 commentsSubDivider.appendChild(personName);
-commentsSubDivider.appendChild(personComment);
+commentsSubDivider.appendChild(commentTime);
 
+// commentsDivider.appendChild(commentsSubDivider);
+// commentsDivider.appendChild(personComment);
+
+let commentsContainer = document.createElement("div");
+commentsContainer.classList.add("comments-container");
+
+commentsContainer.appendChild(commentsSubDivider);
+commentsContainer.appendChild(personComment);
 
 commentsDivider.appendChild(avatar);
-commentsDivider.appendChild(commentsSubDivider);
-commentsDivider.appendChild(commentTime);
+commentsDivider.appendChild(commentsContainer);
+
+
 parent.appendChild(commentsDivider);
 
 };
-
 
     commentsArray.forEach(object => {
         displayArrayObjects(object);
@@ -69,8 +79,6 @@ parent.appendChild(commentsDivider);
 
 let formEl = document.querySelector("form");
 console.log(formEl);
-
-
 
 
 function getFormattedDate() {
@@ -94,9 +102,8 @@ formEl.addEventListener("submit", (e) => {
          date: userDate,
 
         }
-    
-    let newCommentEl = document.querySelectorAll('.comments__divider > *');
-    newCommentEl.forEach(el => el.remove());
+
+    commentSection.innerText= "";
 
     commentsArray.unshift(newComment);
     console.log(commentsArray)

@@ -230,7 +230,113 @@
             height: 50%; 
         }
     }
+
+    .new-comments-section{
+            width: 100vw; 
+            display:flex; 
+            justify-content: center;
+    }
     
+    .user {
+        &-name__input-text {
+            margin: 0 0 5vw 5vw; 
+            padding: 1rem; 
+        }
+        
+        &-name__label {
+            margin: 0 0 0 5vw; 
+            color: $mercury;
+        }
+
+        &-comments {
+            display: flex; 
+            flex-direction: column;
+            padding: 0 0 5vw 1rem;
+
+            &__image {
+                width: 4rem; 
+                height: 4rem; 
+                border-radius: 2rem; 
+            }
+        }
+
+        &-response {
+            padding: 1rem; 
+            margin: 0 0 0 5vw;
+            
+            &__label {
+            margin: 0 0 0 5vw; 
+            color: $mercury;
+        }
+        }
+    }
+
+    .submit-button {
+        color: white; 
+        font-size: 2rem; 
+        background-color: black; 
+        width: 90%; 
+        height: 3rem;
+        border-radius: 0.5rem; 
+        margin: 5vw; 
+    }
+
+.comments {
+    &__title {
+        padding: 7.5vw 5vw 5vw 5vw; 
+    }
+
+    &-section {
+        width: 100vw; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    &__divider {
+        display:flex;
+        justify-content: center;
+        border-bottom: 1px $mercury solid;  
+        padding: 5vw; 
+        width: 100%; 
+    }
+
+    &-avatar {
+        background-color: $mercury;
+        width: 3rem; 
+        height: 3rem;
+        border-radius: 1.5rem;  
+    }
+}
+
+.comments__sub-divider {
+    width: 40vw; 
+    padding: 0 0 0 5vw; 
+    display: flex; 
+    justify-content: space-between;
+}
+
+.comments__name{
+    font-weight: 600; 
+    font-size: 0.875rem; 
+}
+
+.person__comments{
+    font-weight: 400; 
+    font-size: 0.875rem; 
+    padding: 0 0 0 5vw; 
+}
 
 
+.user-button {
+    padding: 1rem; 
+    margin: 1rem; 
+}
+
+.comments-container{
+    display: flex; 
+    flex-direction: column; 
+    width: 45%; 
+
+}
 
