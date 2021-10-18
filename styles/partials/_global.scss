@@ -19,20 +19,13 @@
 
     @include tablet {
         flex-direction: row; 
-<<<<<<< HEAD
-        padding: 0 0 0 5vw; 
-=======
         padding: 0 0 0 4.68vw;     
->>>>>>> sprint-2
     }
 
     &__title {
         display: flex; 
         justify-content: center;
-<<<<<<< HEAD
-=======
         align-items: center; 
->>>>>>> sprint-2
         font-family: $font-stack; 
         font-weight: 400; 
         font-size: 2rem; 
@@ -60,10 +53,6 @@
                 padding: 4.68vw; 
             }
 
-            @include tablet {
-                width: auto;
-            }
-
             &--hover:hover {
                 border-bottom: 1px white solid; 
                 color: white; 
@@ -78,14 +67,10 @@
     }    
 }
 
-<<<<<<< HEAD
-
-=======
 .nav__title a {
     text-decoration: none; 
     color: white; 
 }
->>>>>>> sprint-2
 
 .band {
     display: flex; 
@@ -223,106 +208,4 @@
         font-size: 0.75rem;            
     }
 
-<<<<<<< HEAD
-.footer {
-    padding: 7.5vw 5vw 5vw 5vw;
-    
-    @include tablet {
-        display: flex; 
-        flex-direction: column; 
-        padding: 2rem 4.688vw 4.688vw 4.688vw; 
-
-    }
-    
-    &__top {
-        font-size: 1.25rem;  
-        font-family: $font-stack; 
-        font-weight: 600; 
-
-        @include tablet {
-            display: flex; 
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        &-logo {
-            @include tablet {
-                display:flex; 
-            }
-        }
-    }
-    
-    &__title {
-        @include tablet {
-            font-size: 3rem; 
-            padding: 1.75rem 0.6rem 0 4.688vw;
-        }
-    }
-
-    &__title-bandsite {
-        display: none; 
-
-        @include tablet {
-            font-family: $font-stack; 
-            font-weight: 400; 
-            display: block; 
-            vertical-align: bottom;
-            font-size: 1.75rem;  
-            padding: 4.688vw; 
-        }
-    }
-
-    &__logo-image {
-        height: 2rem; 
-        width: 2rem; 
-        padding: 1rem;
-
-        @include tablet {
-            justify-content: center;
-            padding: 2.25rem 1rem 2.25rem 2.25rem;  
-        }
-    }
-
-    &__contact {
-        @include tablet {
-            display: flex; 
-            width: 100%; 
-        }
-    
-        &-info {
-            padding: 0 0 4.68vw 4.65vw;  
-        }
-
-        &-info h2 {
-            font-size: 1.25rem; 
-            line-height: 1.75rem; 
-            font-family: regular; 
-        }
-
-        &-info p {
-            font-size: 1rem; 
-            line-height: 1.5rem; 
-            font-family: regular; 
-        }
-    }
-
-    &__bottom-header {
-        font-family: $font-stack; 
-        font-weight: 400; 
-        padding: 5vw;
-        
-        @include tablet {
-            display: none; 
-        }
-    }
-
-    &__copy-right {
-        padding: 0 5vw 5vw 5vw;
-        font-family: $font-stack;
-        font-weight: 400;  
-        font-size: 0.75rem;            
-    }
-
-=======
->>>>>>> sprint-2
 }

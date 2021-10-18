@@ -7,57 +7,6 @@
     margin: 0;
     padding: 0;
 }
-<<<<<<< HEAD
-
-    .hero__title {
-        font-family: $font-stack; 
-        font-size: 2rem; 
-        font-weight: 600; 
-        background-size: 100% 100%; 
-        background-repeat: none;
-        color: white;  
-        display: flex; 
-        align-items: center;
-        box-sizing: border-box;
-        padding: 5vw;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.357),rgba(0, 0, 0, 0.5)), url(/assets/images/hero-bio.jpg);
-        width: $background-width;
-        height: 20rem; 
-            
-        @include tablet {
-            height: 30rem; 
-            font-size: 3.75rem;
-        }
-
-        @include desktop {
-            height: 45rem;
-        }
-    }
-
-    .band{
-        color: $bandsite-black;
-        width: 100%; 
-        height: auto; 
-        box-sizing: content-box;
-        align-content: center;
-        font-family: $font-stack;       
-        font-weight: 600; 
-
-        @include tablet {
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__title {
-            font-size: 2rem; 
-            padding: 7vw 5vw 5vw 5vw; 
-
-            @include tablet {
-                @include tablet-section-header; 
-                padding: 6.25vw 4.688vw 4.688vw 4.688vw; 
-            }
-        }
-=======
 .hero__title {
     font-family: $font-stack; 
     font-size: 2rem; 
@@ -114,104 +63,16 @@
         width: 90%;
         height: 90%;
         padding: 0 5vw 5vw 5vw; 
->>>>>>> sprint-2
 
         @include tablet {
                padding: 0 4.688vw 4.688vw 4.688vw;
             display: flex;
             justify-content: center;
             align-self: center;
-<<<<<<< HEAD
-            width: 90%;
-            height: 90%;
-            padding: 0 5vw 5vw 5vw; 
-
-            @include tablet {
-                padding: 0 4.688vw 4.688vw 4.688vw;
-                display: flex;
-                justify-content: center;
-                align-self: center;
-                @include width; 
-            }
-        }
-
-        &__info {
-            display:flex; 
-            flex-direction:column;
-            justify-content: center;
-            align-items: flex-start;
-
-            @include tablet {
-            padding: 0 4.688vw;
-            }
-=======
             @include width; 
->>>>>>> sprint-2
         }
     }
 
-<<<<<<< HEAD
-        &__quote {
-            font-family: $font-stack; 
-            font-size: 600;  
-            font-size: 1.25rem; 
-            padding: 0 5vw;
-
-            @include tablet {
-                width: 70%;
-                flex-direction: column; 
-                align-self: center; 
-                justify-content: center;
-                @include tablet-subheader;
-                padding: 1rem; 
-
-            }
-
-            &-signature {
-                font-family: $font-stack; 
-                font-size: 600; 
-                font-size:1.25rem;
-                padding: 0 5vw 5vw 5vw; 
-                
-                @include tablet {
-                    font-size: 1rem;
-                    padding: 0 4.688vw;  
-                    @include band-alignment;
-                    @include width;
-                }
-            }
-        }
-    }
-
-    .description {
-        display: flex; 
-        flex-direction: column; 
-
-        @include tablet {
-            @include width; 
-            flex-direction: column; 
-            display: flex; 
-            align-items: center;
-            padding: 0 4.688vw;
-            width: 100%; 
-        }
-
-        &__title {
-            padding: 0 5vw 5vw 5vw;
-            font-size: 1rem; 
-
-                @include tablet {
-                    @include tablet-subheader;
-                    font-family: $font-stack;  
-                    font-weight: 600; 
-                    padding: 6.25vw 4.688vw 2rem 4.688vw;
-                    width: 70%;
-                }
-        }
-        
-        &__image {
-            padding: $padding-mobile; 
-=======
     &__info {
         display:flex; 
         flex-direction:column;
@@ -237,7 +98,6 @@
             @include tablet-subheader;
             padding: 1rem; 
 
->>>>>>> sprint-2
         }
 
         &-signature {
@@ -245,16 +105,6 @@
             font-size: 600; 
             font-size:1.25rem;
             padding: 0 5vw 5vw 5vw; 
-<<<<<<< HEAD
-            width: auto; 
-
-            @include tablet {
-            @include band-alignment;
-            @include tablet-body; 
-            width: 100%; 
-            padding: 0 2rem 2rem 0;
-            }   
-=======
                 
             @include tablet {
                 font-size: 1rem;
@@ -262,22 +112,16 @@
                 @include band-alignment;
                 @include width;
             }
->>>>>>> sprint-2
         }
     }
 }
 
-<<<<<<< HEAD
-    .gallery {
-        display: flex; 
-=======
 .description {
     display: flex; 
     flex-direction: column; 
 
     @include tablet {
         @include width; 
->>>>>>> sprint-2
         flex-direction: column; 
         display: flex; 
         align-items: center;
@@ -285,15 +129,6 @@
         width: 100%; 
     }
 
-<<<<<<< HEAD
-        @include tablet {       
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            padding: 0 4.68vw 0 4.68vw; 
-        }
-=======
     &__title {
         padding: 0 5vw 5vw 5vw;
         font-size: 1rem; 
@@ -323,7 +158,6 @@
         }   
     }
 }
->>>>>>> sprint-2
 
 .gallery {
     display: flex; 
@@ -351,27 +185,6 @@
         }
      }
     
-<<<<<<< HEAD
-        &__images {
-            width: 100%; 
-            height: auto; 
-            padding: 0 5vw 5vw 5vw; 
-
-            @include tablet {
-                padding: $padding-desktop;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%; 
-                padding: 0 4.68vw 4.68vw 4.68vw;
-            }
-            
-            &-sub {
-                @include tablet {
-                    display:flex; 
-                    justify-content: center;
-                }
-=======
     &__images {
         width: 100%; 
         height: auto; 
@@ -390,7 +203,6 @@
             @include tablet {
                 display:flex; 
                 justify-content: center;
->>>>>>> sprint-2
             }
         }
     
@@ -418,28 +230,6 @@
     }
 }
 
-<<<<<<< HEAD
-                    @include tablet {
-                        width: 30%;
-                        padding: 0 0 1rem 1rem;  
-                    }
-                }
-        }  
-    } 
-
-    .paragraph {
-        @include tablet {
-            display:flex; 
-            align-self: center; 
-            justify-content: center;
-            box-sizing: border-box; 
-            width: 70%;
-            height: 50%; 
-        }
-    }
-    
-    
-=======
 .new-comments {
     @include tablet {
         display:flex; 
@@ -644,6 +434,5 @@
 }
 
 
->>>>>>> sprint-2
 
 

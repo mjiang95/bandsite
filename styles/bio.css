@@ -12,21 +12,12 @@
   font-family: "Avenir";
   src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
   font-weight: 400;
-<<<<<<< HEAD
 }
 * {
   margin: 0;
   padding: 0;
   font-family: "Avenir", sans-serif;
 }
-=======
-}
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Avenir", sans-serif;
-}
->>>>>>> sprint-2
 
 .nav {
   display: flex;
@@ -39,20 +30,13 @@
 @media (min-width: 48rem) {
   .nav {
     flex-direction: row;
-<<<<<<< HEAD
-    padding: 0 0 0 5vw;
-=======
     padding: 0 0 0 4.68vw;
->>>>>>> sprint-2
   }
 }
 .nav__title {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
-=======
   align-items: center;
->>>>>>> sprint-2
   font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 2rem;
@@ -80,11 +64,6 @@
     padding: 4.68vw;
   }
 }
-@media (min-width: 48rem) {
-  .nav__list-items {
-    width: auto;
-  }
-}
 .nav__list-items--hover:hover {
   border-bottom: 1px white solid;
   color: white;
@@ -94,14 +73,11 @@
   color: white;
 }
 
-<<<<<<< HEAD
-=======
 .nav__title a {
   text-decoration: none;
   color: white;
 }
 
->>>>>>> sprint-2
 .band {
   display: flex;
   flex-direction: column;
@@ -133,11 +109,6 @@
   background: #323232;
   color: white;
 }
-<<<<<<< HEAD
-
-.footer {
-  padding: 7.5vw 5vw 5vw 5vw;
-}
 @media (min-width: 48rem) {
   .footer {
     display: flex;
@@ -145,23 +116,11 @@
     padding: 2rem 4.688vw 4.688vw 4.688vw;
   }
 }
-=======
-@media (min-width: 48rem) {
-  .footer {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 4.688vw 4.688vw 4.688vw;
-  }
-}
->>>>>>> sprint-2
 .footer__top {
   font-size: 1.25rem;
   font-family: "Avenir", sans-serif;
   font-weight: 600;
-<<<<<<< HEAD
-=======
   width: 90vw;
->>>>>>> sprint-2
 }
 @media (min-width: 48rem) {
   .footer__top {
@@ -175,67 +134,6 @@
     display: flex;
   }
 }
-<<<<<<< HEAD
-@media (min-width: 48rem) {
-  .footer__title {
-    font-size: 3rem;
-    padding: 1.75rem 0.6rem 0 4.688vw;
-  }
-}
-.footer__title-bandsite {
-  display: none;
-}
-@media (min-width: 48rem) {
-  .footer__title-bandsite {
-    font-family: "Avenir", sans-serif;
-    font-weight: 400;
-    display: block;
-    vertical-align: bottom;
-    font-size: 1.75rem;
-    padding: 4.688vw;
-  }
-}
-.footer__logo-image {
-  height: 2rem;
-  width: 2rem;
-  padding: 1rem;
-}
-@media (min-width: 48rem) {
-  .footer__logo-image {
-    justify-content: center;
-    padding: 2.25rem 1rem 2.25rem 2.25rem;
-  }
-}
-@media (min-width: 48rem) {
-  .footer__contact {
-    display: flex;
-    width: 100%;
-  }
-}
-.footer__contact-info {
-  padding: 0 0 4.68vw 4.65vw;
-}
-.footer__contact-info h2 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: regular;
-}
-.footer__contact-info p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-family: regular;
-}
-.footer__bottom-header {
-  font-family: "Avenir", sans-serif;
-  font-weight: 400;
-  padding: 5vw;
-}
-@media (min-width: 48rem) {
-  .footer__bottom-header {
-    display: none;
-  }
-}
-=======
 .footer__title {
   padding: 0 0 0 5vw;
 }
@@ -306,7 +204,6 @@
     display: none;
   }
 }
->>>>>>> sprint-2
 .footer__copy-right {
   padding: 0 5vw 5vw 5vw;
   font-family: "Avenir", sans-serif;
@@ -561,8 +458,6 @@
     width: 70%;
     height: 50%;
   }
-<<<<<<< HEAD
-=======
 }
 
 @media (min-width: 48rem) {
@@ -764,5 +659,4 @@
   font-weight: 400;
   font-size: 0.875rem;
   padding: 0 0 0 5vw;
->>>>>>> sprint-2
 }/*# sourceMappingURL=bio.css.map */

@@ -32,45 +32,10 @@ let arrayObject = [{
 }
 ];
 
-<<<<<<< HEAD
-// let createShowDiv = document.createElement('div');
-    // createShowDiv.classList.add("shows-tickets");
-    // let parentShowDiv = document.querySelector('.shows-tickets');
-=======
->>>>>>> sprint-2
     let createShowsTitle = document.createElement('h2'); 
     createShowsTitle.innerText = 'Show'; 
     parent.appendChild(createShowsTitle);
 
-<<<<<<< HEAD
-    let createShowsInfo = document.createElement('div');
-    createShowsInfo.classList.add("shows-info");
-    parent.appendChild(createShowsInfo);
-
-
-let displayTicketInfo = (ticketInfo) => {
-
-
-    // let createShowDiv = document.createElement('div');
-    // createShowDiv.classList.add("shows-tickets");
-
-    // parent.appendChild(createShowDiv);
-    // console.log(parent);
-
-    // let parentShowDiv = document.querySelector('.shows-tickets');
-    // let createShowsTitle = document.createElement('h2'); 
-    // createShowsTitle.innerText = 'Show'; 
-    let createShowsInfo = document.createElement('div');
-    createShowsInfo.classList.add("shows-info");
-    let createShowsInfoContainer = document.createElement('article');
-
-
-    // parent.appendChild(createShowsTitle);
-    // parent.appendChild(createShowsInfo);
-
-    
-
-=======
     let createTicketPurchaseDiv = document.createElement("div");
     createTicketPurchaseDiv.classList.add("ticket-purchase__div");
     parent.appendChild(createTicketPurchaseDiv);
@@ -100,7 +65,6 @@ let displayTicketInfo = (ticketInfo) => {
     let createShowsInfo = document.createElement('div');
     createShowsInfo.classList.add("shows-info");
    
->>>>>>> sprint-2
     let createShowsInfoSubtitle = document.createElement('h3');
     createShowsInfoSubtitle.classList.add("shows-info__subtitle");
     createShowsInfoSubtitle.innerText = 'Date';
@@ -138,26 +102,6 @@ let displayTicketInfo = (ticketInfo) => {
 
     createShowsInfo.appendChild(createShowsInfoLocation);
 
-<<<<<<< HEAD
-    // createShowsInfoContainer.appendChild(createShowsInfo);
-    parent.appendChild(createShowsInfo);
-
-    let parentShowInfo = document.querySelector('.shows-info');
-
-    // parentShowInfo.appendChild(createShowsInfoSubtitle);
-    // parentShowInfo.appendChild(createShowsInfoDate);
-    // parentShowInfo.appendChild(createShowsInfoSubtitle1);
-    // parentShowInfo.appendChild(createShowsInfoVenue);
-    // parentShowInfo.appendChild(createShowsInfoSubtitle2);
-    // parentShowInfo.appendChild(createShowsInfoLocation);
-
-    console.log(parentShowInfo);
-
-    // arrayObject.forEach(object => {
-    //     displayTicketInfo(object);
-    // })
-    
-=======
     let createButton = document.createElement("button");
     createButton.classList.add("shows-info__button");
     createButton.innerText = 'BUY TICKETS';
@@ -167,7 +111,6 @@ let displayTicketInfo = (ticketInfo) => {
 
 
     parent.appendChild(createContainer);
->>>>>>> sprint-2
 };
 
 
