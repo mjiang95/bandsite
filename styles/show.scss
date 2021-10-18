@@ -74,7 +74,7 @@ iframe {
     @include tablet {
         padding: 4.68vw 4.68vw 4.68vw 0; 
         width: 28.8rem; 
-        height: 10rem; 
+        height: 11rem; 
     }
 
     @include desktop {
@@ -134,8 +134,18 @@ iframe {
     @include tablet {
         padding: 4.68vw 4.68vw 4.68vw 0; 
     }
+
+    @include desktop {
+        padding: 3.51vw; 
+    }
 }
 
+.shows-info:hover{
+    background-color: $alabaster;
+}
+.shows-info:active{
+    background-color: $mercury; 
+}
 
 .shows-info {
     padding: 5vw;  

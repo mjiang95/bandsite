@@ -30,7 +30,7 @@
 @media (min-width: 48rem) {
   .nav {
     flex-direction: row;
-    padding: 4.68vw;
+    padding: 0 0 0 4.68vw;
   }
 }
 .nav__title {
@@ -61,7 +61,7 @@
 @media (min-width: 48rem) {
   .nav__list-items {
     width: auto;
-    padding: 0 4.68vw 0 4.68vw;
+    padding: 4.68vw;
   }
 }
 .nav__list-items--hover:hover {
