@@ -19,17 +19,24 @@
 
     @include tablet {
         flex-direction: row; 
+<<<<<<< HEAD
         padding: 0 0 0 5vw; 
+=======
+        padding: 0 0 0 4.68vw;     
+>>>>>>> sprint-2
     }
 
     &__title {
         display: flex; 
         justify-content: center;
+<<<<<<< HEAD
+=======
+        align-items: center; 
+>>>>>>> sprint-2
         font-family: $font-stack; 
         font-weight: 400; 
         font-size: 2rem; 
         line-height: 1rem; 
-        padding: 1rem; 
     }
 
     &__list {
@@ -45,25 +52,40 @@
             justify-content: center;
             align-items: center;
             display: flex;
+            text-decoration: none; 
+            color: $alabaster;
+
+            @include tablet {
+                width: auto;
+                padding: 4.68vw; 
+            }
 
             @include tablet {
                 width: auto;
             }
 
             &--hover:hover {
-             border-bottom: 1px white solid; 
-             color: white; 
+                border-bottom: 1px white solid; 
+                color: white; 
+             
             }
 
             &--active:active {
-             border-bottom: 1px white solid; 
-             color:white; 
+                border-bottom: 1px white solid; 
+                color:white; 
             }
         }
     }    
 }
 
+<<<<<<< HEAD
 
+=======
+.nav__title a {
+    text-decoration: none; 
+    color: white; 
+}
+>>>>>>> sprint-2
 
 .band {
     display: flex; 
@@ -90,11 +112,118 @@
     font-weight: 400; 
 }
 
-footer {
+.footer {
+    padding: 7.5vw 5vw 5vw 5vw;
+    width: 100vw;  
+    box-sizing: border-box;  
     background: $bandsite-black;
-    color: white; 
-}
+    color: white;  
+    
+    @include tablet {
+        display: flex; 
+        flex-direction: column; 
+        padding: 2rem 4.688vw 4.688vw 4.688vw; 
+    }
+    
+    &__top {
+        font-size: 1.25rem;  
+        font-family: $font-stack; 
+        font-weight: 600; 
+        width: 90vw; 
+        
+        @include tablet {
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+        }
 
+        &-logo {
+            @include tablet {
+                display:flex; 
+            }
+        }
+    }
+    
+    &__title {
+        padding: 0 0 0 5vw; 
+
+        @include tablet {
+            font-size: 3rem; 
+            padding: 1.75rem 0.6rem 0 4.688vw;
+        }
+    }
+
+    &__title-bandsite {
+        display: none; 
+
+        @include tablet {
+            font-family: $font-stack; 
+            font-weight: 400; 
+            display: block; 
+            vertical-align: bottom;
+            font-size: 1.75rem;  
+            padding: 4.688vw; 
+        }
+    }
+
+    &__logo-image {
+        height: 2rem; 
+        width: 2rem; 
+        padding: 1rem;
+
+        @include tablet {
+            justify-content: center;
+            padding: 2.25rem 1rem 2.25rem 2.25rem;  
+        }
+    }
+
+    &__contact {
+        font-family: $font-stack;
+
+        @include tablet {
+            display: flex; 
+            width: 100vw; 
+        }
+    
+        &-info {
+            font-family: $font-stack;
+            padding: 0 0 4.68vw 4.65vw;  
+            font-size: 0.875rem; 
+
+            @include tablet {
+                width:26vw; 
+            }
+        }
+
+        &-info h2 {
+            font-family: $font-stack;
+            line-height: 1.75rem; 
+        }
+
+        &-info p {
+            font-family: $font-stack;
+            line-height: 1.5rem; 
+        }
+    }
+
+    &__bottom-header {
+        font-family: $font-stack; 
+        font-weight: 400; 
+        padding: 5vw;
+        
+        @include tablet {
+            display: none; 
+        }
+    }
+
+    &__copy-right {
+        padding: 0 5vw 5vw 5vw;
+        font-family: $font-stack;
+        font-weight: 400;  
+        font-size: 0.75rem;            
+    }
+
+<<<<<<< HEAD
 .footer {
     padding: 7.5vw 5vw 5vw 5vw;
     
@@ -194,4 +323,6 @@ footer {
         font-size: 0.75rem;            
     }
 
+=======
+>>>>>>> sprint-2
 }
