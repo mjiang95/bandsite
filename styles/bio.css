@@ -73,6 +73,11 @@
   color: white;
 }
 
+.nav__title a {
+  text-decoration: none;
+  color: white;
+}
+
 .band {
   display: flex;
   flex-direction: column;
@@ -544,6 +549,14 @@
   }
 }
 
+.user-name__input-text:active {
+  border: 1px black solid;
+}
+
+.user-response:active {
+  border: 1px black solid;
+}
+
 .submit-button {
   color: white;
   font-size: 2rem;
@@ -646,9 +659,4 @@
   font-weight: 400;
   font-size: 0.875rem;
   padding: 0 0 0 5vw;
-}
-
-.user-button {
-  padding: 1rem;
-  margin: 1rem;
 }/*# sourceMappingURL=bio.css.map */

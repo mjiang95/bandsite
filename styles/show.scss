@@ -95,7 +95,6 @@ iframe {
         display:flex; 
     }
 
-
     &__div {
         width: 100vw;
         display: none;
@@ -118,11 +117,9 @@ iframe {
 
     &__subheader {
         @include desktop {
-        padding: 0 8vw 0 8vw; 
+            padding: 0 8vw 0 8vw; 
         }
     }
-
-
 }
 
 

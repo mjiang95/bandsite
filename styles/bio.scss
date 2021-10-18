@@ -7,417 +7,424 @@
     margin: 0;
     padding: 0;
 }
-
-    .hero__title {
-        font-family: $font-stack; 
-        font-size: 2rem; 
-        font-weight: 600; 
-        background-size: 100% 100%; 
-        background-repeat: none;
-        color: white;  
-        display: flex; 
-        align-items: center;
-        box-sizing: border-box;
-        padding: 5vw;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.357),rgba(0, 0, 0, 0.5)), url(/assets/images/hero-bio.jpg);
-        width: $background-width;
-        height: 20rem; 
+.hero__title {
+    font-family: $font-stack; 
+    font-size: 2rem; 
+    font-weight: 600; 
+    background-size: 100% 100%; 
+    background-repeat: none;
+    color: white;  
+    display: flex; 
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.357),rgba(0, 0, 0, 0.5)), url(/assets/images/hero-bio.jpg);
+    width: $background-width;
+    height: 20rem; 
             
-        @include tablet {
-            height: 30rem; 
-            font-size: 3.75rem;
-        }
+    @include tablet {
+        height: 30rem; 
+        font-size: 3.75rem;
+    }
 
-        @include desktop {
-            height: 45rem;
+    @include desktop {
+        height: 45rem;
+    }
+}
+
+.band{
+    color: $bandsite-black;
+    width: 100%; 
+    height: auto; 
+    box-sizing: content-box;
+    align-content: center;
+    font-family: $font-stack;       
+    font-weight: 600; 
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 2rem; 
+        padding: 7vw 5vw 5vw 5vw; 
+
+        @include tablet {
+            @include tablet-section-header; 
+            padding: 6.25vw 4.688vw 4.688vw 4.688vw; 
         }
     }
 
-    .band{
-        color: $bandsite-black;
-        width: 100%; 
-        height: auto; 
-        box-sizing: content-box;
-        align-content: center;
-        font-family: $font-stack;       
-        font-weight: 600; 
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 90%;
+        height: 90%;
+        padding: 0 5vw 5vw 5vw; 
 
         @include tablet {
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__title {
-            font-size: 2rem; 
-            padding: 7vw 5vw 5vw 5vw; 
-
-            @include tablet {
-                @include tablet-section-header; 
-                padding: 6.25vw 4.688vw 4.688vw 4.688vw; 
-            }
-        }
-
-        &__image {
+               padding: 0 4.688vw 4.688vw 4.688vw;
             display: flex;
             justify-content: center;
             align-self: center;
-            width: 90%;
-            height: 90%;
-            padding: 0 5vw 5vw 5vw; 
-
-            @include tablet {
-                padding: 0 4.688vw 4.688vw 4.688vw;
-                display: flex;
-                justify-content: center;
-                align-self: center;
-                @include width; 
-            }
-        }
-
-        &__info {
-            display:flex; 
-            flex-direction:column;
-            justify-content: center;
-            align-items: flex-start;
-
-            @include tablet {
-            padding: 0 4.688vw;
-            }
-        }
-
-        &__quote {
-            font-family: $font-stack; 
-            font-size: 600;  
-            font-size: 1.25rem; 
-            padding: 0 5vw;
-
-            @include tablet {
-                width: 70%;
-                flex-direction: column; 
-                align-self: center; 
-                justify-content: center;
-                @include tablet-subheader;
-                padding: 1rem; 
-
-            }
-
-            &-signature {
-                font-family: $font-stack; 
-                font-size: 600; 
-                font-size:1.25rem;
-                padding: 0 5vw 5vw 5vw; 
-                
-                @include tablet {
-                    font-size: 1rem;
-                    padding: 0 4.688vw;  
-                    @include band-alignment;
-                    @include width;
-                }
-            }
+            @include width; 
         }
     }
 
-    .description {
-        display: flex; 
-        flex-direction: column; 
+    &__info {
+        display:flex; 
+        flex-direction:column;
+        justify-content: center;
+        align-items: flex-start;
 
         @include tablet {
-            @include width; 
-            flex-direction: column; 
-            display: flex; 
-            align-items: center;
-            padding: 0 4.688vw;
-            width: 100%; 
-        }
-
-        &__title {
-            padding: 0 5vw 5vw 5vw;
-            font-size: 1rem; 
-
-                @include tablet {
-                    @include tablet-subheader;
-                    font-family: $font-stack;  
-                    font-weight: 600; 
-                    padding: 6.25vw 4.688vw 2rem 4.688vw;
-                    width: 70%;
-                }
-        }
-        
-        &__image {
-            padding: $padding-mobile; 
-        }
-
-        &__paragraph {
-            padding: 0 5vw 5vw 5vw; 
-            width: auto; 
-
-            @include tablet {
-            @include band-alignment;
-            @include tablet-body; 
-            width: 100%; 
-            padding: 0 2rem 2rem 0;
-            }   
+        padding: 0 4.688vw;
         }
     }
 
-    .gallery {
-        display: flex; 
-        flex-direction: column; 
-        align-items: center;
-        background-color: $alabaster; 
+    &__quote {
+        font-family: $font-stack; 
+        font-size: 600;  
+        font-size: 1.25rem; 
+        padding: 0 5vw;
 
-        @include tablet {       
-            display: flex;
-            flex-direction: column;
+        @include tablet {
+            width: 70%;
+            flex-direction: column; 
+            align-self: center; 
             justify-content: center;
-            align-content: center;
-            padding: 0 4.68vw 0 4.68vw; 
+            @include tablet-subheader;
+            padding: 1rem; 
+
         }
 
-        &__title {
-            align-self: flex-start; 
-            padding: 7.5vw 5vw 5vw 5vw; 
-            @include mobile-page-section-header;
-            font-family: demi; 
+        &-signature {
+            font-family: $font-stack; 
+            font-size: 600; 
+            font-size:1.25rem;
+            padding: 0 5vw 5vw 5vw; 
+                
+            @include tablet {
+                font-size: 1rem;
+                padding: 0 4.688vw;  
+                @include band-alignment;
+                @include width;
+            }
+        }
+    }
+}
+
+.description {
+    display: flex; 
+    flex-direction: column; 
+
+    @include tablet {
+        @include width; 
+        flex-direction: column; 
+        display: flex; 
+        align-items: center;
+        padding: 0 4.688vw;
+        width: 100%; 
+    }
+
+    &__title {
+        padding: 0 5vw 5vw 5vw;
+        font-size: 1rem; 
+
+            @include tablet {
+                @include tablet-subheader;
+                font-family: $font-stack;  
+                font-weight: 600; 
+                padding: 6.25vw 4.688vw 2rem 4.688vw;
+                width: 70%;
+            }
+    }
+        
+    &__image {
+        padding: $padding-mobile; 
+    }
+
+    &__paragraph {
+         padding: 0 5vw 5vw 5vw; 
+         width: auto; 
+
+        @include tablet {
+        @include band-alignment;
+        @include tablet-body; 
+        width: 100%; 
+        padding: 0 2rem 2rem 0;
+        }   
+    }
+}
+
+.gallery {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    background-color: $alabaster; 
+
+    @include tablet {       
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-content: center;
+        padding: 0 4.68vw 0 4.68vw; 
+    }
+
+    &__title {
+        align-self: flex-start; 
+         padding: 7.5vw 5vw 5vw 5vw; 
+        @include mobile-page-section-header;
+        font-family: demi; 
 
         @include tablet {
             padding: 6.25vw 4.68vw 4.68vw 4.68vw; 
             @include tablet-section-header;
-            }
         }
+     }
     
-        &__images {
-            width: 100%; 
-            height: auto; 
-            padding: 0 5vw 5vw 5vw; 
+    &__images {
+        width: 100%; 
+        height: auto; 
+        padding: 0 5vw 5vw 5vw; 
 
-            @include tablet {
-                padding: $padding-desktop;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%; 
-                padding: 0 4.68vw 4.68vw 4.68vw;
-            }
+         @include tablet {
+             padding: $padding-desktop;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             width: 100%; 
+             padding: 0 4.68vw 4.68vw 4.68vw;
+        }
             
-            &-sub {
-                @include tablet {
-                    display:flex; 
-                    justify-content: center;
-                }
+        &-sub {
+            @include tablet {
+                display:flex; 
+                justify-content: center;
             }
-    
-            &-1 {
-                    width: 92%; 
-                    height: auto; 
-                    padding: 0 0 1rem 1rem; 
-
-                    @include tablet {
-                        width: 30%;
-                        padding: 0 0 1rem 1rem;  
-                    }
-                }
-        }  
-    } 
-
-    .paragraph {
-        @include tablet {
-            display:flex; 
-            align-self: center; 
-            justify-content: center;
-            box-sizing: border-box; 
-            width: 70%;
-            height: 50%; 
         }
+    
+        &-1 {
+                width: 92%; 
+                height: auto; 
+                padding: 0 0 1rem 1rem; 
+
+                @include tablet {
+                    width: 30%;
+                    padding: 0 0 1rem 1rem;  
+                }
+        }
+    }  
+} 
+
+.paragraph {
+    @include tablet {
+        display:flex; 
+        align-self: center; 
+        justify-content: center;
+        box-sizing: border-box; 
+        width: 70%;
+        height: 50%; 
+    }
+}
+
+.new-comments {
+    @include tablet {
+        display:flex; 
+        justify-content: center;
     }
 
-    .new-comments {
+        &-section{
+            width: 100vw; 
+            display: flex; 
+            justify-content: flex-start;
+            border-bottom: 1px $mercury solid; 
+            padding: 5vw; 
+            box-sizing: border-box; 
 
-        @include tablet {
-            display:flex; 
-            justify-content: center;
-        }
-
-            &-section{
-                width: 100vw; 
+            @include tablet {
+                width: 80vw; 
                 display: flex; 
                 justify-content: flex-start;
-                border-bottom: 1px $mercury solid; 
-                padding: 5vw; 
-                box-sizing: border-box; 
-
-                @include tablet {
-                    width: 80vw; 
-                    display: flex; 
-                    justify-content: flex-start;
-                    padding: 4.68vw; 
-            }
-                @include desktop {
-                    width: 55vw;
-                    padding: 0 0 3.51% 0;
-                }
-        }
-    }
-    
-    .user {
-        &-name__input-text {
-            margin: 0 0 5vw 5vw; 
-            padding: 1rem; 
-
-            @include tablet {
-                width: 83%; 
+                padding: 4.68vw; 
             }
 
             @include desktop {
-                margin: 0 0 3.51vw 3.51vw; 
+                width: 55vw;
+                padding: 0 0 3.51% 0;
             }
         }
+}
+    
+.user {
+    &-name__input-text {
+         margin: 0 0 5vw 5vw; 
+         padding: 1rem; 
+
+         @include tablet {
+            width: 83%; 
+        }
+
+        @include desktop {
+            margin: 0 0 3.51vw 3.51vw; 
+        }
+    }
         
-        &-name__label {
-            margin: 0 0 0 5vw; 
-            color: $mercury;
+    &-name__label {
+        margin: 0 0 0 5vw; 
+        color: $mercury;
 
-            @include tablet {
-                font-size: 1.25rem; 
-            }
-        }
-
-        &-comments {
-            display: flex; 
-            flex-direction: column;
-            width: 100%; 
-            
-            &__image {
-                width: 2.25rem; 
-                height: 2.25rem; 
-                border-radius: 1.125rem; 
-
-                @include tablet {
-                width: 3rem; 
-                height: 3rem; 
-                border-radius: 1.5rem;
-                } 
-            }
-        }
-
-        &-response {
-            padding: 1rem; 
-            margin: 0 0 0 5vw;
-
-            @include tablet {
-                width: 84%;
-                margin: 0 0 0 3.51vw;  
-            }
-
-            &__label {
-            margin: 0 0 0 5vw; 
-            color: $mercury;
-
-            @include tablet {
-                font-size: 1.5rem; 
-            }
-            }
+        @include tablet {
+            font-size: 1.25rem; 
         }
     }
 
-    .submit-button {
-        color: white; 
-        font-size: 2rem; 
-        background-color: black; 
-        width: 93%; 
-        height: 3rem;
-        border-radius: 0.5rem; 
-        margin: 1rem 0 0 0; 
-        align-self: flex-end; 
+    &-comments {
+        display: flex; 
+        flex-direction: column;
+        width: 100%; 
+            
+        &__image {
+            width: 2.25rem; 
+            height: 2.25rem; 
+            border-radius: 1.125rem; 
+
+            @include tablet {
+            width: 3rem; 
+            height: 3rem; 
+            border-radius: 1.5rem;
+            } 
+        }
+    }
+
+    &-response {
+        padding: 1rem; 
+        margin: 0 0 0 5vw;
 
         @include tablet {
-            width: 45%; 
-            align-self: flex-end; 
-            margin: 1rem 1rem 0 0; 
+            width: 84%;
+            margin: 0 0 0 3.51vw;  
+        }
+
+        &__label {
+            margin: 0 0 0 5vw; 
+            color: $mercury;
+
+        @include tablet {
+             font-size: 1.5rem; 
+            }
+        }
+    }
+}
+
+.user-name__input-text:active {
+    border: 1px black solid; 
+}
+
+
+.user-response:active {
+    border: 1px black solid; 
+}
+
+
+.submit-button {
+    color: white; 
+    font-size: 2rem; 
+    background-color: black; 
+    width: 93%; 
+    height: 3rem;
+    border-radius: 0.5rem; 
+    margin: 1rem 0 0 0; 
+    align-self: flex-end; 
+
+    @include tablet {
+        width: 45%; 
+        align-self: flex-end; 
+        margin: 1rem 1rem 0 0; 
 
         @include desktop {
             margin: 3.51vw 1rem 0 0; 
         }
+    }
+}
+
+.comments {
+    &__title {
+        padding: 7.5vw 5vw 5vw 5vw; 
+
+        @include tablet {
+            font-size: 2.25rem; 
+            padding: 6.25vw 4.68vw 4.68vw 4.68vw; 
         }
     }
 
-    .comments {
-        &__title {
-            padding: 7.5vw 5vw 5vw 5vw; 
+    &-section {
+        width: 100vw; 
+        display: flex; 
+            flex-direction: column; 
+        align-items: center; 
 
-            @include tablet {
-                font-size: 2.25rem; 
-                padding: 6.25vw 4.68vw 4.68vw 4.68vw; 
-            }
+        @include tablet {
+            margin: 4.68vw; 
+            width: 90%;
         }
+    }
 
-        &-section {
-            width: 100vw; 
-            display: flex; 
-             flex-direction: column; 
-            align-items: center; 
+    &__divider {
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px #AFAFAF solid;
+        padding: 5vw;
+        width: 100vw;
+        box-sizing: border-box;
 
-            @include tablet {
-                margin: 4.68vw; 
-                width: 90%;
-            }
-        }
-
-        &__divider {
-            display: flex;
-            justify-content: flex-start;
-            border-bottom: 1px #AFAFAF solid;
-            padding: 5vw;
-            width: 100vw;
-            box-sizing: border-box;
-
-            @include tablet{
-                justify-content: space-between;
-                width: 80vw;
-            }
-
-            @include desktop {
-                width: 56vw;  
-            }
-        }
-
-        &__sub-divider {
-            width: 95%; 
-            padding: 0 0 0 5vw; 
-            display: flex; 
+        @include tablet{
             justify-content: space-between;
+            width: 80vw;
         }
 
-         &-avatar {
-            
-            background-color: $mercury;
-            width: 2.25rem; 
-            height: 2.25rem;
-            border-radius: 1.125rem;  
+        @include desktop {
+            width: 56vw;  
+        }
+    }
+    &__sub-divider {
+        width: 95%; 
+        padding: 0 0 0 5vw; 
+        display: flex; 
+        justify-content: space-between;
+    }
 
-            @include tablet {
+        &-avatar {
+        background-color: $mercury;
+        width: 2.25rem; 
+        height: 2.25rem;
+        border-radius: 1.125rem;  
+
+        @include tablet {
             background-color: $mercury;
             width: 3rem; 
             height: 3rem;
             border-radius: 1.5rem;  
             }
-        }
+    }
 
-        &__name {
-            font-weight: 600; 
-            font-size: 0.875rem;
+    &__name {
+        font-weight: 600; 
+        font-size: 0.875rem;
             
-            @include tablet {
-                font-size: 1.5rem; 
-            }
-        }
-
-        &-container {
-            display: flex; 
-            flex-direction: column; 
-            width: 100%; 
+        @include tablet {
+            font-size: 1.5rem; 
         }
     }
+
+    &-container {
+        display: flex; 
+        flex-direction: column; 
+        width: 100%; 
+    }
+}
 
 .person__comments{
     font-weight: 400; 
@@ -427,9 +434,5 @@
 }
 
 
-.user-button {
-    padding: 1rem; 
-    margin: 1rem; 
-}
 
 

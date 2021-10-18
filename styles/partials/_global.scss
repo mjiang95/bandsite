@@ -54,20 +54,23 @@
             }
 
             &--hover:hover {
-             border-bottom: 1px white solid; 
-             color: white; 
+                border-bottom: 1px white solid; 
+                color: white; 
              
             }
 
             &--active:active {
-             border-bottom: 1px white solid; 
-             color:white; 
+                border-bottom: 1px white solid; 
+                color:white; 
             }
         }
     }    
 }
 
-
+.nav__title a {
+    text-decoration: none; 
+    color: white; 
+}
 
 .band {
     display: flex; 
@@ -101,7 +104,6 @@
     background: $bandsite-black;
     color: white;  
     
-    
     @include tablet {
         display: flex; 
         flex-direction: column; 
@@ -114,7 +116,6 @@
         font-weight: 600; 
         width: 90vw; 
         
-
         @include tablet {
             display: flex; 
             justify-content: space-between;
@@ -177,7 +178,6 @@
             @include tablet {
                 width:26vw; 
             }
-
         }
 
         &-info h2 {
