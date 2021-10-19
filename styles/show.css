@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Avenir";
-  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf);
   font-weight: 700;
 }
 @font-face {
   font-family: "Avenir";
-  src: url(/assets/fonts/AvenirNextLTPro-Demi.otf);
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf);
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir";
-  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf);
   font-weight: 400;
 }
 * {
@@ -218,7 +218,7 @@
 }
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.357), rgba(0, 0, 0, 0.5)), url(/assets/images/hero-shows.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.357), rgba(0, 0, 0, 0.5)), url(../assets/images/hero-bio.jpg);
   background-size: cover;
   background-repeat: none;
   width: 100vw;

@@ -116,6 +116,10 @@ formEl.addEventListener("submit", (e) => {
     
 })
 
+const API_KEY_STRING = "?api_key=5982046c-40a3-48ae-8614-23aea4d1a7e9";
 
-
-
+axois 
+    .get(`https://project-1-api.herokuapp.com/register)${API_KEY_STRING}`)
+    .then (result => {
+        result.data
+    });
