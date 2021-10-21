@@ -52,6 +52,9 @@ let displayArrayObjects = (comments) => {
 
 axios.get(userCommentUrl).then((result) => {
   console.log(result.data);
+
+  let defaultComment = result.data;
+  console.log(defaultComment);
   
   defaultComment.forEach((comments) => {
     const sortedActivities = result.data.slice().sort((a, b) => b.timestamp - a.timestamp);
@@ -89,7 +92,6 @@ formEl.addEventListener("submit", (e) => {
 
     .then((result) => {
       console.log(result.data);
-      result.data
         result.data.forEach((comment) => {
           displayArrayObjects(comment);
 
