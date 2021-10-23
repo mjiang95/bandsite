@@ -352,14 +352,6 @@ iframe {
   }
 }
 
-.shows-info:hover {
-  background-color: #FAFAFA;
-}
-
-.shows-info:active {
-  background-color: #AFAFAF;
-}
-
 .shows-info {
   padding: 5vw;
   width: 93vw;

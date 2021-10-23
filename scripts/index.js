@@ -33,7 +33,6 @@ let displayArrayObjects = (comments) => {
     let date = dateObj.getDate();
 
     commentTime.innerText = `${month}/${date}/${Year}`;
-//   commentTime.innerText = comments.timestamp;
 
   commentsSubDivider.appendChild(personName);
   commentsSubDivider.appendChild(commentTime);
@@ -51,15 +50,15 @@ let displayArrayObjects = (comments) => {
 };
 
 axios.get(userCommentUrl).then((result) => {
-  console.log(result.data);
+    console.log(result.data);
 
-  let defaultComment = result.data;
-  console.log(defaultComment);
-  
-  defaultComment.forEach((comments) => {
-    const sortedActivities = result.data.slice().sort((a, b) => b.timestamp - a.timestamp);
-    console.log(sortedActivities);
-    displayArrayObjects(comments);
+    let defaultComment = result.data;
+    console.log(defaultComment);
+    const sortedComments = result.data.slice().sort((a, b) => b.timestamp - a.timestamp);
+    console.log(sortedComments);
+
+    sortedComments.forEach((comment) => {
+    displayArrayObjects(comment);
   });
 
 
@@ -68,7 +67,6 @@ axios.get(userCommentUrl).then((result) => {
 let formEl = document.querySelector("form");
 console.log(formEl);
 
-// let newTimeConverter = comments.map((element) => )
 function getFormattedDate() {
     const currentDate = new Date();
     return `${
@@ -86,26 +84,19 @@ formEl.addEventListener("submit", (e) => {
   axios
     .post(userCommentUrl, {
       name: userName,
-      comment: userComment,
-      // "date": userDate
+      comment: userComment
     })
 
     .then((result) => {
-      console.log(result.data);
-        result.data.forEach((comment) => {
+
+    axios
+        .get(userCommentUrl)
+        .then((result) => {
+          const sortedComments = result.data.slice().sort((a, b) => b.timestamp - a.timestamp);
+          console.log(sortedComments);
+
+          sortedComments.forEach((comment) => {
           displayArrayObjects(comment);
-
-          // axios
-          //   .get(userCommentUrl)
-          //   .then((result) => {
-          //       console.log(result.data);
-          //       result.data.forEach((comment) => {
-          //       displayArrayObjects(comment);
-          //       // result.data.unshift(-1);
-          //       });
-
-          // let comments = result.data;
-          // console.log(comments);
         })
 
         .catch((error) => {
@@ -116,12 +107,5 @@ formEl.addEventListener("submit", (e) => {
   commentSection.innerText = "";
 
   formEl.reset();
+    })
 });
-
-
-// let newArrayDateConverted = comments.map((element) =>{
-
-//     element.timestamp = dateConvert(element.timestamp);
-
-// });
-// console.log(newArrayDateConverted);

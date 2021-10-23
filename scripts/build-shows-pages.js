@@ -1,36 +1,6 @@
 let parent = document.querySelector('.ticket-purchase');
-
-let arrayObject = [{
-    date: "Mon Sept 6 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, Ca"
-},
-{
-    date: "Tues Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francsico, Ca"
-},
-{
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francsico, Ca"
-},
-{
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francsico, Ca"
-},
-{
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francsico, Ca"
-},
-{
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francsico, Ca"
-}
-];
+const API_KEY_STRING = "?api_key=1996a410-381a-4a15-948d-b8d336a28691";
+const showDateURL = `https://project-1-api.herokuapp.com/showdates${API_KEY_STRING}`; 
 
     let createShowsTitle = document.createElement('h2'); 
     createShowsTitle.innerText = 'Show'; 
@@ -73,10 +43,16 @@ let displayTicketInfo = (ticketInfo) => {
 
     let createShowsInfoDate = document.createElement('p');
     createShowsInfoDate.classList.add("shows-info__date");
-    createShowsInfoDate.innerText = ticketInfo.date;
+
+    let timestamp = Number(ticketInfo.date); 
+    let dateObj = new Date(timestamp);
+    let month = dateObj.getMonth() + 1;
+    let Year = dateObj.getFullYear();
+    let date = dateObj.getDate();
+
+    createShowsInfoDate.innerText = `${month}/${date}/${Year}`;
 
     createShowsInfo.appendChild(createShowsInfoDate);
-
 
     let createShowsInfoSubtitle1 = document.createElement('h3');
     createShowsInfoSubtitle1.classList.add("shows-info__subtitle");
@@ -86,7 +62,7 @@ let displayTicketInfo = (ticketInfo) => {
 
     let createShowsInfoVenue = document.createElement('p');
     createShowsInfoVenue.classList.add("shows-info__venue");
-    createShowsInfoVenue.innerText = ticketInfo.venue;
+    createShowsInfoVenue.innerText = ticketInfo.place;
 
     createShowsInfo.appendChild(createShowsInfoVenue);
 
@@ -114,6 +90,17 @@ let displayTicketInfo = (ticketInfo) => {
 };
 
 
-arrayObject.forEach(object => {
+axios
+    .get(showDateURL)
+    .then((result) => {
+    let defaultComment = result.data;
+    defaultComment.forEach(object => {
     displayTicketInfo(object);
+    })
+});
+
+let ticketInfoCard = document.querySelector(".shows-info");
+
+ticketInfoCard.addEventListener("click", (e) => {
+    ticketInfoCard.style.backgroundColor = "grey";
 })
