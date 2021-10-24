@@ -137,12 +137,12 @@ iframe {
     }
 }
 
-// .shows-info:hover{
-//     background-color: $alabaster;
-// }
-// .shows-info:active{
-//     background-color: $mercury; 
-// }
+.shows-info--hover{
+    background-color: $alabaster;
+}
+.shows-info--active{
+    background-color: $mercury; 
+}
 
 .shows-info {
     padding: 5vw;  

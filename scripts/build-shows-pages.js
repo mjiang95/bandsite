@@ -46,11 +46,14 @@ let displayTicketInfo = (ticketInfo) => {
 
     let timestamp = Number(ticketInfo.date); 
     let dateObj = new Date(timestamp);
-    let month = dateObj.getMonth() + 1;
+    var  months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+    let month = months[dateObj.getMonth()];
+    var days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"]
+    let day = days[dateObj.getDay()]
     let Year = dateObj.getFullYear();
     let date = dateObj.getDate();
 
-    createShowsInfoDate.innerText = `${month}/${date}/${Year}`;
+    createShowsInfoDate.innerText = [day+" "+ month +" "+ date +" "+ Year];
 
     createShowsInfo.appendChild(createShowsInfoDate);
 
@@ -87,6 +90,20 @@ let displayTicketInfo = (ticketInfo) => {
 
 
     parent.appendChild(createContainer);
+    
+    createShowsInfo.addEventListener("mouseenter", (e) => {
+        createShowsInfo.classList.add("shows-info--hover");
+    })
+
+    createShowsInfo.addEventListener("mouseleave", (e) => {
+        createShowsInfo.classList.remove("shows-info--hover");
+    })
+
+    let ticketPurchase = document.querySelector(".ticket-purchase__container")
+
+    createShowsInfo.addEventListener("click", (e) => {
+    createShowsInfo.classList.toggle("shows-info--active");
+    })
 };
 
 
@@ -99,8 +116,8 @@ axios
     })
 });
 
-let ticketInfoCard = document.querySelector(".shows-info");
+// let ticketInfoCard = document.querySelector(".shows-info");
 
-ticketInfoCard.addEventListener("click", (e) => {
-    ticketInfoCard.style.backgroundColor = "grey";
-})
+// ticketInfoCard.addEventListener("click", (e) => {
+//     ticketInfoCard.style.backgroundColor = "grey";
+// })
