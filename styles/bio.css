@@ -654,6 +654,9 @@
   flex-direction: column;
   width: 100%;
 }
+.comments-container p {
+  padding: 0 0 0 5vw;
+}
 
 .person__comments {
   font-weight: 400;
