@@ -5,7 +5,7 @@ const userCommentUrl = `https://project-1-api.herokuapp.com/comments${API_KEY_ST
 
 let parent = document.querySelector(".comments-section");
 
-let displayArrayObjects = (comments) => {
+let displayCommentsArray = (comments) => {
 let commentsDivider = document.createElement("div");
 commentsDivider.classList.add("comments__divider");
 
@@ -40,7 +40,6 @@ likeEl.innerText = comments.likes;
 commentsSubDivider.appendChild(personName);
 commentsSubDivider.appendChild(commentTime);
 
-
 let commentsContainer = document.createElement("div");
 commentsContainer.classList.add("comments-container");
 
@@ -52,8 +51,6 @@ commentsContainer.appendChild(likeEl);
 commentsDivider.appendChild(avatar);
 commentsDivider.appendChild(commentsContainer);
 
-
-
 parent.appendChild(commentsDivider);
 };
 
@@ -63,7 +60,7 @@ axios
     let defaultComment = result.data;
     const sortedComments = result.data.slice().sort((a, b) => b.timestamp - a.timestamp);
     sortedComments.forEach((comment) => {
-    displayArrayObjects(comment);
+    displayCommentsArray(comment);
   });
 });
 
@@ -96,14 +93,14 @@ axios
     .then((result) => {
       const sortedComments = result.data.slice().sort((a, b) => b.timestamp - a.timestamp);
       sortedComments.forEach((comment) => {
-      displayArrayObjects(comment);
+      displayCommentsArray(comment);
     })
     .catch((error) => {
     });
 });
 
-commentSection.innerText = "";
+  commentSection.innerText = "";
 
-formEl.reset();
-})
+  formEl.reset();
+  })
 });

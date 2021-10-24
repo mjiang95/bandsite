@@ -53,7 +53,7 @@ let day = days[dateObj.getDay()]
 let Year = dateObj.getFullYear();
 let date = dateObj.getDate();
 
-createShowsInfoDate.innerText = [day+" "+ month +" "+ date +" "+ Year];
+createShowsInfoDate.innerText = [day+" "+ month+" "+ date +" "+ Year];
 
 createShowsInfo.appendChild(createShowsInfoDate);
 
@@ -87,8 +87,6 @@ createButton.innerText = 'BUY TICKETS';
 
 createShowsInfo.appendChild(createButton);
 createContainer.appendChild(createShowsInfo);
-
-
 parent.appendChild(createContainer);
 
 createShowsInfo.addEventListener("mouseenter", (e) => {
@@ -104,12 +102,11 @@ createShowsInfo.addEventListener("click", (e) => {
     })
 };
 
-
 axios
     .get(showDateURL)
     .then((result) => {
-        let defaultComment = result.data;
-        defaultComment.forEach(object => {
+        let showsTime = result.data;
+        showsTime.forEach(object => {
         displayTicketInfo(object);
     })
 });

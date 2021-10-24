@@ -136,6 +136,7 @@
 }
 .footer__title {
   padding: 0 0 0 5vw;
+  font-size: 3rem;
 }
 @media (min-width: 48rem) {
   .footer__title {
@@ -159,7 +160,7 @@
 .footer__logo-image {
   height: 2rem;
   width: 2rem;
-  padding: 1rem;
+  padding: 5vw;
 }
 @media (min-width: 48rem) {
   .footer__logo-image {
@@ -194,10 +195,14 @@
   font-family: "Avenir", sans-serif;
   line-height: 1.5rem;
 }
+.footer__contact-info-div {
+  padding: 1rem 0 1rem 0;
+}
 .footer__bottom-header {
   font-family: "Avenir", sans-serif;
   font-weight: 400;
   padding: 5vw;
+  font-size: 1.75rem;
 }
 @media (min-width: 48rem) {
   .footer__bottom-header {
@@ -437,7 +442,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 5vw;
-  width: 18rem;
+  width: 100%;
   color: white;
   background-color: #323232;
   border-radius: 0.3125rem;

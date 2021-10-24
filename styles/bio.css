@@ -136,6 +136,7 @@
 }
 .footer__title {
   padding: 0 0 0 5vw;
+  font-size: 3rem;
 }
 @media (min-width: 48rem) {
   .footer__title {
@@ -159,7 +160,7 @@
 .footer__logo-image {
   height: 2rem;
   width: 2rem;
-  padding: 1rem;
+  padding: 5vw;
 }
 @media (min-width: 48rem) {
   .footer__logo-image {
@@ -194,10 +195,14 @@
   font-family: "Avenir", sans-serif;
   line-height: 1.5rem;
 }
+.footer__contact-info-div {
+  padding: 1rem 0 1rem 0;
+}
 .footer__bottom-header {
   font-family: "Avenir", sans-serif;
   font-weight: 400;
   padding: 5vw;
+  font-size: 1.75rem;
 }
 @media (min-width: 48rem) {
   .footer__bottom-header {
@@ -401,19 +406,17 @@
   }
 }
 .gallery__title {
+  font-family: "Avenir", sans-serif;
   align-self: flex-start;
   padding: 7.5vw 5vw 5vw 5vw;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  font-family: demi;
+  font-weight: 600;
 }
 @media (min-width: 48rem) {
   .gallery__title {
     padding: 6.25vw 4.68vw 4.68vw 4.68vw;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 .gallery__images {
@@ -582,11 +585,13 @@
 
 .comments__title {
   padding: 7.5vw 5vw 5vw 5vw;
+  font-weight: 600;
 }
 @media (min-width: 48rem) {
   .comments__title {
     font-size: 2.25rem;
     padding: 6.25vw 4.68vw 4.68vw 4.68vw;
+    font-weight: 600;
   }
 }
 .comments-section {

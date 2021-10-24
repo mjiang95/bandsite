@@ -130,7 +130,8 @@
     }
     
     &__title {
-        padding: 0 0 0 5vw; 
+        padding: 0 0 0 5vw;
+        font-size: 3rem;  
 
         @include tablet {
             font-size: 3rem; 
@@ -154,7 +155,7 @@
     &__logo-image {
         height: 2rem; 
         width: 2rem; 
-        padding: 1rem;
+        padding: 5vw;
 
         @include tablet {
             justify-content: center;
@@ -189,12 +190,17 @@
             font-family: $font-stack;
             line-height: 1.5rem; 
         }
+
+        &-info-div {
+            padding: 1rem 0 1rem 0; 
+        }
     }
 
     &__bottom-header {
         font-family: $font-stack; 
         font-weight: 400; 
         padding: 5vw;
+        font-size: 1.75rem; 
         
         @include tablet {
             display: none; 
