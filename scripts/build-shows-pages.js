@@ -2,6 +2,8 @@ let parent = document.querySelector('.ticket-purchase');
 const API_KEY_STRING = "?api_key=1996a410-381a-4a15-948d-b8d336a28691";
 const showDateURL = `https://project-1-api.herokuapp.com/showdates${API_KEY_STRING}`; 
 
+//Creating DOM for show dates 
+
 let createShowsTitle = document.createElement('h2'); 
 createShowsTitle.innerText = 'Show'; 
 parent.appendChild(createShowsTitle);
@@ -43,6 +45,8 @@ createShowsInfo.appendChild(createShowsInfoSubtitle);
 
 let createShowsInfoDate = document.createElement('p');
 createShowsInfoDate.classList.add("shows-info__date");
+
+//Function for converting timestamp into show dates
 
 let timestamp = Number(ticketInfo.date); 
 let dateObj = new Date(timestamp);
@@ -88,6 +92,8 @@ createButton.innerText = 'BUY TICKETS';
 createShowsInfo.appendChild(createButton);
 createContainer.appendChild(createShowsInfo);
 parent.appendChild(createContainer);
+
+// AddEventListener to style hover and active states for each row/show date
 
 createShowsInfo.addEventListener("mouseenter", (e) => {
     createShowsInfo.classList.add("shows-info--hover");

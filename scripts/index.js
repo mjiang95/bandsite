@@ -5,7 +5,10 @@ const userCommentUrl = `https://project-1-api.herokuapp.com/comments${API_KEY_ST
 
 let parent = document.querySelector(".comments-section");
 
+//DOM for comments sections
+
 let displayCommentsArray = (comments) => {
+
 let commentsDivider = document.createElement("div");
 commentsDivider.classList.add("comments__divider");
 
@@ -26,6 +29,8 @@ personComment.innerText = comments.comment;
 let commentTime = document.createElement("p");
 commentTime.classList.add("comment-Time");
 
+// Function for converting timestamp 
+
 let timestamp = comments.timestamp; 
 let dateObj = new Date(timestamp);
 let month = dateObj.getMonth() + 1;
@@ -33,9 +38,6 @@ let Year = dateObj.getFullYear();
 let date = dateObj.getDate();
 
 commentTime.innerText = `${month}/${date}/${Year}`;
-
-let likeEl = document.createElement("p")
-likeEl.innerText = comments.likes;
 
 commentsSubDivider.appendChild(personName);
 commentsSubDivider.appendChild(commentTime);
@@ -45,14 +47,14 @@ commentsContainer.classList.add("comments-container");
 
 commentsContainer.appendChild(commentsSubDivider);
 commentsContainer.appendChild(personComment);
-commentsContainer.appendChild(likeEl);
-
 
 commentsDivider.appendChild(avatar);
 commentsDivider.appendChild(commentsContainer);
 
 parent.appendChild(commentsDivider);
 };
+
+// Get, sort and display comments according to latest time posted 
 
 axios
   .get(userCommentUrl)
@@ -79,6 +81,8 @@ e.preventDefault();
 let userName = e.target.name.value;
 let userComment = e.target.response.value;
 let userDate = getFormattedDate();
+
+// Posting new comments according to the most recent timestamp
 
 axios
     .post(userCommentUrl, {
